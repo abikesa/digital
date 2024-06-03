@@ -1,7 +1,7 @@
 - It's the digital age. We may feel more connected, but we're [lonier](https://en.wikipedia.org/wiki/Kho_Gaye_Hum_Kahan)
 - Romance is one of the great delusions & distractions from the existential question
 - The existential question is best approach from the perspective of Nietzsche
-   - He's so wise because he never asked a question that isn't a question
+   - He's so clever because he never pondered a question that wasn't a question
    - We lesser mortals have dwelt on questions of romance, loyalty, god, etc
    - It's pretty clear that our squandering of time and energy is the attributable factor
-   - Undeniably not [so wise](https://www.gutenberg.org/files/52190/52190-h/52190-h.htm#WHY_I_AM_SO_WISE) for this very reason and none else 
+   - Undeniably not [so clever](https://www.gutenberg.org/files/52190/52190-h/52190-h.htm#WHY_I_AM_SO_CLEVER) for this very reason and none else 
