@@ -1,6 +1,6 @@
 - It's the digital age. We may feel more connected, but we're [lonier](https://en.wikipedia.org/wiki/Kho_Gaye_Hum_Kahan)
 - Romance is one of the great delusions & distractions from the existential question
-- The existential question is best approach from the perspective of Nietzsche
+- The existential question is best approached from the perspective of Nietzsche (if you're among the strong)
    - He's so clever because he never pondered a question that wasn't a question
    - We lesser mortals have dwelt on questions of romance, loyalty, god, etc
    - It's pretty clear that our squandering of time and energy is the attributable factor
