@@ -4,4 +4,6 @@
    - He's so clever because he never pondered a question that wasn't a question
    - We lesser mortals have dwelt on questions of romance, loyalty, god, etc
    - It's pretty clear that our squandering of time and energy is the attributable factor
-   - Undeniably not [so clever](https://www.gutenberg.org/files/52190/52190-h/52190-h.htm#WHY_I_AM_SO_CLEVER) for this very reason and none else 
+   - Undeniably not [so clever](https://www.gutenberg.org/files/52190/52190-h/52190-h.htm#WHY_I_AM_SO_CLEVER) for this very reason and none else
+- Questions of `forever` lack integrity, are dishonest with reality
+   - Fundamental to these questions is the `systematizing` of some ideal person, place or time 
