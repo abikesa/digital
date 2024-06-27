@@ -58,4 +58,4 @@ To address potential auditing concerns:
 
 Remember, while innovation is valued in research, it's crucial to maintain a clear link between any new technology and your grant's original objectives. Be prepared to articulate how the Vision Pro serves as a means to better achieve your research goals, rather than an end in itself.
 
-<iframe src="risk.html" height="1000px" width="100%" style="borders:none"></iframe>
+<iframe src="app/risk.html" height="1000px" width="100%" style="borders:none"></iframe>
