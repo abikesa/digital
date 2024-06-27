@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Versions &#8212; Digital Age</title>
+    <title>Available Resources for Developers &#8212; Digital Age</title>
   
   
   
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Dictation" href="chapter2.html" />
-    <link rel="prev" title="WebApp" href="intro.html" />
+    <link rel="prev" title="Interactive Patient Education App" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,12 +175,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    WebApp
+                    Interactive Patient Education App
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Versions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Available Resources for Developers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter2.html">Dictation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter3.html">Justification</a></li>
 </ul>
@@ -368,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Versions</h1>
+    <h1>Available Resources for Developers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,11 +378,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk">Risk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#script">Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">Shell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-content">The Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-feedback">Your Feedback</a></li>
 </ul>
             </nav>
         </div>
@@ -394,285 +391,109 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="versions">
-<h1>Versions<a class="headerlink" href="#versions" title="Link to this heading">#</a></h1>
-<p>Of the key files: <code class="docutils literal notranslate"><span class="pre">risk.html</span></code> and <code class="docutils literal notranslate"><span class="pre">script.js</span></code></p>
-<section id="risk">
-<h2>Risk<a class="headerlink" href="#risk" title="Link to this heading">#</a></h2>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mortality Risk Calculator<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;scenario-dropdown&quot;</span><span class="p">&gt;</span>Select Scenario:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;scenario-dropdown&quot;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;donor&quot;</span><span class="p">&gt;</span>Donor<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;nondonor&quot;</span><span class="p">&gt;</span>Nondonor<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;genpop&quot;</span><span class="p">&gt;</span>Genpop<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;fair&quot;</span><span class="p">&gt;</span>Fair<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;poor&quot;</span><span class="p">&gt;</span>Poor<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;calculate-risk-button&quot;</span> <span class="na">disabled</span><span class="p">&gt;</span>Calculate Mortality Risk<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 80vw; margin: 0 auto;&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mortality-risk-graph&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;1000&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;assets/js/script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="available-resources-for-developers">
+<h1>Available Resources for Developers<a class="headerlink" href="#available-resources-for-developers" title="Link to this heading">#</a></h1>
+<section id="the-content">
+<h2>The Content<a class="headerlink" href="#the-content" title="Link to this heading">#</a></h2>
+<p>That’s an excellent approach. You’re creating a comprehensive resource that combines educational content with interactive tools for patients. Here’s a breakdown of how your current structure supports this goal:</p>
+<ol class="arabic simple">
+<li><p>Educational Content:</p>
+<ul class="simple">
+<li><p>The Markdown files (<a class="reference external" href="http://chapter1.md">chapter1.md</a>, <a class="reference external" href="http://chapter2.md">chapter2.md</a>, <a class="reference external" href="http://chapter3.md">chapter3.md</a>, <a class="reference external" href="http://intro.md">intro.md</a>, <a class="reference external" href="http://index.md">index.md</a>) likely contain the main educational content for patients.</p></li>
+<li><p>The Jupyter notebook (chapter2.ipynb) allows for interactive explanations, potentially with code examples or data visualizations.</p></li>
+</ul>
+</li>
+<li><p>Interactive App:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">app</span></code> directory houses your interactive application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">risk.html</span></code> is probably the main page for your interactive tool.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">assets</span></code> folder contains the necessary CSS (style.css) and JavaScript (script.js) to make your app functional and visually appealing.</p></li>
+</ul>
+</li>
+<li><p>Jupyter Book Structure:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> are used by Jupyter Book to configure the project and define the table of contents.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory is where Jupyter Book will generate the final output.</p></li>
+</ul>
+</li>
+<li><p>Additional Resources:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">references.bib</span></code> can be used to manage citations and create a bibliography for your educational content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code> likely contains information about the project, how to set it up, or how to use it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> lists the Python dependencies for your project.</p></li>
+</ul>
+</li>
+</ol>
+<p>This structure allows you to create a seamless experience where patients can read through educational material and then interact with an app that helps them apply what they’ve learned. It’s a powerful way to combine information delivery with practical application.</p>
+<p>If you’re looking to expand or improve this setup, you might consider:</p>
+<ol class="arabic simple">
+<li><p>Adding more interactive elements within the Jupyter notebooks.</p></li>
+<li><p>Ensuring your app is accessible and easy to use for patients with varying levels of technical skill.</p></li>
+<li><p>Incorporating patient feedback mechanisms to continuously improve both the educational content and the interactive app.</p></li>
+</ol>
+<p>Is there any specific aspect of this project you’d like to discuss further or need assistance with?</p>
 </section>
-<section id="script">
-<h2>Script<a class="headerlink" href="#script" title="Link to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// Default to excellent self-rated health scenario</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">timePoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fetchCSV</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">row</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">trim</span><span class="p">()).</span><span class="nx">filter</span><span class="p">(</span><span class="nx">row</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">row</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">loadData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Fetch coefficients</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">coefficientsData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetchCSV</span><span class="p">(</span><span class="s1">&#39;https://abikesa.github.io/flow/_downloads/b57ad99810799d0be5a9e18f54115561/b.csv&#39;</span><span class="p">);</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">header</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">coefficientsData</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rows</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Coefficients loaded:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">beta</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// Fetch survival data</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">survivalData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetchCSV</span><span class="p">(</span><span class="s1">&#39;https://abikesa.github.io/flow/_downloads/9c26f2afd014707dc60aefc8facbf60d/s0.csv&#39;</span><span class="p">);</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">survivalHeader</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">survivalRows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">survivalData</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">timePoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<span class="w">        </span><span class="nx">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<span class="w">        </span><span class="nx">survivalRows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">row</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">time</span><span class="p">,</span><span class="w"> </span><span class="nx">survival</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
-<span class="w">            </span><span class="nx">timePoints</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">time</span><span class="p">);</span>
-<span class="w">            </span><span class="nx">s0</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">survival</span><span class="p">);</span>
-<span class="w">        </span><span class="p">});</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Survival data loaded:&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">timePoints</span><span class="p">,</span><span class="w"> </span><span class="nx">s0</span><span class="p">});</span>
-
-<span class="w">        </span><span class="c1">// Enable the calculate button after data is loaded</span>
-<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;calculate-risk-button&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error loading data:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error loading data. Please check the console for details.&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">function</span><span class="w"> </span><span class="nx">selectScenario</span><span class="p">(</span><span class="nx">scenario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">scenario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;donor&#39;</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;nondonor&#39;</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;genpop&#39;</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;fair&#39;</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;poor&#39;</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">default</span><span class="o">:</span>
-<span class="w">            </span><span class="nx">scenarioVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// Set default to &#39;good&#39;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="nx">calculateMortalityRisk</span><span class="p">(</span><span class="nx">scenario</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span><span class="w"> </span><span class="nx">calculateMortalityRisk</span><span class="p">(</span><span class="nx">scenario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">beta</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">s0</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">timePoints</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Data is not yet loaded. Please wait.&#39;</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">logHR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">beta</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">curr</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">curr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">scenarioVector</span><span class="p">[</span><span class="nx">index</span><span class="p">]),</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s0</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f0</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">logHR</span><span class="p">));</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">colorSchemes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;donor&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0, 191, 255, 1)&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;nondonor&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255, 0, 255, 1)&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;genpop&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(106, 168, 79, 1)&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;fair&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255, 218, 185, 1)&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;poor&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(128, 0, 128, 1)&#39;</span>
-<span class="w">    </span><span class="p">};</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">riskResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">timePoints</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">time</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`Risk at </span><span class="si">${</span><span class="nx">time</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span><span class="si">}</span><span class="sb"> years: </span><span class="si">${</span><span class="nx">f1</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span><span class="si">}</span><span class="sb">%`</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">mortalityChart</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">mortalityChart</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mortality-risk-graph&#39;</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">mortalityChart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="nx">timePoints</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)),</span>
-<span class="w">            </span><span class="nx">datasets</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span>
-<span class="w">                </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mortality Risk&#39;</span><span class="p">,</span>
-<span class="w">                </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">f1</span><span class="p">,</span>
-<span class="w">                </span><span class="nx">stepped</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                </span><span class="nx">borderColor</span><span class="o">:</span><span class="w"> </span><span class="nx">colorSchemes</span><span class="p">[</span><span class="nx">scenario</span><span class="p">],</span>
-<span class="w">                </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="nx">colorSchemes</span><span class="p">[</span><span class="nx">scenario</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;1)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;0.2)&#39;</span><span class="p">),</span>
-<span class="w">                </span><span class="nx">borderWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span>
-<span class="w">            </span><span class="p">}]</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">maintainAspectRatio</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">scales</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Timepoints (years)&#39;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mortality Risk (%)&#39;</span>
-<span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nx">suggestedMin</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">                    </span><span class="nx">suggestedMax</span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span>
-<span class="w">                    </span><span class="nx">stepSize</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;mortality-risk-results&quot;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">riskResults</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// Load data when the page loads</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">loadData</span><span class="p">);</span>
-
-<span class="c1">// Attach event listener to the dropdown to update the scenarioVector</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;scenario-dropdown&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">selectScenario</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="c1">// Attach event listener to the calculate button</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;calculate-risk-button&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">scenario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;scenario-dropdown&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">calculateMortalityRisk</span><span class="p">(</span><span class="nx">scenario</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Thu Jun 27 12:11 PM</p>
-</div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <span class="xref std std-doc">markdown-notebooks</span>.</p>
-</section>
-<section id="shell">
-<h2>Shell<a class="headerlink" href="#shell" title="Link to this heading">#</a></h2>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># User-defined inputs for abi/abikesa_jbb.sh; substantive edits on 08/14/2023:</span>
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology): &quot;</span><span class="w"> </span>ROOT_DIR
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be built within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
-<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your commit statement: &quot;</span><span class="w"> </span>COMMIT_THIS
-
-<span class="c1"># Build the book with Jupyter Book</span>
-git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span>
-
-<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">eval</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ROOT_DIR</span><span class="k">)</span><span class="s2">&quot;</span>
-
-rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/_build<span class="p">;</span><span class="w"> </span>cuts<span class="w"> </span>runtimes<span class="w"> </span>by<span class="w"> </span><span class="m">90</span>%+<span class="p">;</span>
-rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/_build
-jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
-mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/_build/html/app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/app/*<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/_build/html/app
-rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
-
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Directory </span><span class="nv">$REPO_NAME</span><span class="s2"> already exists. Choose another directory or delete the existing one.&quot;</span>
-<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="c1"># Cloning</span>
-git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">.git&quot;</span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to clone the repository. Check your GitHub username, repository name, and permissions.&quot;</span>
-<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="c1"># Copy files from subdirectory to the current repository directory; restored $REPO_NAME!!!</span>
-cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
-<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
-
-git<span class="w"> </span>add<span class="w"> </span>./*
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$COMMIT_THIS</span><span class="s2">&quot;</span>
-git<span class="w"> </span>remote<span class="w"> </span>-v
-
-git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">.git&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span>
-
-<span class="c1"># Checkout the main branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>main
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to checkout the main branch. Make sure it exists in the repository.&quot;</span>
-<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="c1"># Pushing changes</span>
-<span class="c1"># git config pull.rebase true</span>
-<span class="c1"># git pull</span>
-git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to push to the repository. Check your credentials and GitHub permissions.&quot;</span>
-<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
-<span class="k">fi</span>
-
-ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
-<span class="nb">cd</span><span class="w"> </span>..
-rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<div role="list" class="citation-list">
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">HdHPK14</a><span class="fn-bracket">]</span></span>
-<p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<section id="your-feedback">
+<h2>Your Feedback<a class="headerlink" href="#your-feedback" title="Link to this heading">#</a></h2>
+<p>Incorporating feedback into your project is an excellent way to improve its effectiveness and user experience. Here are several approaches you could consider:</p>
+<ol class="arabic simple">
+<li><p>In-app feedback mechanism:</p>
+<ul class="simple">
+<li><p>Add a feedback form or button within your interactive app (risk.html).</p></li>
+<li><p>Use JavaScript to capture user input and store it locally or send it to a server.</p></li>
+</ul>
+</li>
+<li><p>Comment system in Jupyter Book:</p>
+<ul class="simple">
+<li><p>Jupyter Book supports adding comments to pages using services like <a class="reference external" href="http://Hypothes.is">Hypothes.is</a> or Utterances.</p></li>
+<li><p>This allows readers to leave feedback directly on specific content.</p></li>
+</ul>
+</li>
+<li><p>Surveys:</p>
+<ul class="simple">
+<li><p>Create periodic surveys using tools like Google Forms or SurveyMonkey.</p></li>
+<li><p>Link to these surveys from your Jupyter Book pages or app.</p></li>
+</ul>
+</li>
+<li><p>User testing sessions:</p>
+<ul class="simple">
+<li><p>Conduct structured user testing sessions with patients.</p></li>
+<li><p>Observe how they interact with your content and app, noting any difficulties or suggestions.</p></li>
+</ul>
+</li>
+<li><p>Analytics:</p>
+<ul class="simple">
+<li><p>Implement web analytics (e.g., Google Analytics) to track user behavior.</p></li>
+<li><p>This can provide insights into which content is most viewed or where users might be struggling.</p></li>
+</ul>
+</li>
+<li><p>Email feedback:</p>
+<ul class="simple">
+<li><p>Provide an email address for users to send detailed feedback or questions.</p></li>
+</ul>
+</li>
+<li><p>Interactive elements:</p>
+<ul class="simple">
+<li><p>Add quick reaction buttons (e.g., “Was this helpful?”) at the end of each chapter.</p></li>
+<li><p>Use JavaScript to capture these reactions.</p></li>
+</ul>
+</li>
+<li><p>GitHub Issues:</p>
+<ul class="simple">
+<li><p>If your project is open-source, encourage users to submit issues or feature requests via GitHub.</p></li>
+</ul>
+</li>
+</ol>
+<p>To implement these, you might need to:</p>
+<ol class="arabic simple">
+<li><p>Modify your <code class="docutils literal notranslate"><span class="pre">risk.html</span></code> to include feedback forms or buttons.</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">script.js</span></code> to handle feedback submission.</p></li>
+<li><p>Add necessary configurations to <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> for comment systems.</p></li>
+<li><p>Create new HTML/JS files for more complex feedback mechanisms.</p></li>
+<li><p>Set up a backend system to receive and store feedback (this might require additional server-side code).</p></li>
+</ol>
+<p>Remember to consider data privacy and security when collecting user feedback, especially in a healthcare context. Always be clear about how you’ll use the feedback and protect user information.</p>
+<p>Would you like more detailed information on implementing any of these feedback methods?</p>
 </section>
 </section>
 
@@ -712,7 +533,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">WebApp</p>
+        <p class="prev-next-title">Interactive Patient Education App</p>
       </div>
     </a>
     <a class="right-next"
@@ -740,11 +561,8 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk">Risk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#script">Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">Shell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-content">The Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-feedback">Your Feedback</a></li>
 </ul>
   </nav></div>
 

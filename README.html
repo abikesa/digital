@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Version-control &#8212; Digital Age</title>
+    <title>Stackoverflow &#8212; Digital Age</title>
   
   
   
@@ -175,12 +175,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    WebApp
+                    Interactive Patient Education App
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">Available Resources for Developers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter2.html">Dictation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter3.html">Justification</a></li>
 </ul>
@@ -368,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Version-control</h1>
+    <h1>Stackoverflow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,9 +378,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stackoverflow">Stackoverflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stackoverflow</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -392,30 +393,34 @@ document.write(`
                 <article class="bd-article">
                   
   <p><strong>Project Structure</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>your-project-folder/
-├── assets/
-│   └── js/
-│       └── script.js
-├── index.html
-└── styles/
-    └── style.css
-</pre></div>
-</div>
-<section id="version-control">
-<h1>Version-control<a class="headerlink" href="#version-control" title="Link to this heading">#</a></h1>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">webApp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">assets</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">js</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">script</span><span class="p">.</span><span class="nx">js</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>age/
+├── README.md
+├── _build/
+├── _config.yml
+├── _toc.yml
+├── app/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── script.js
+│   └── risk.html
+├── chapter1.md
+├── chapter2.ipynb
+├── chapter3.md
+├── index.md
+├── intro.md
+├── references.bib
+└── requirements.txt
 </pre></div>
 </div>
 <p>some code to add to <code class="docutils literal notranslate"><span class="pre">new/jbb_https.sh</span></code></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>_build/html/assets/js<span class="w"> </span>_build/html/styles<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>risk.html<span class="w"> </span>_build/html/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>assets/js/script.js<span class="w"> </span>_build/html/assets/js/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>styles/style.css<span class="w"> </span>_build/html/styles/
-</pre></div>
-</div>
 <section id="stackoverflow">
-<h2>Stackoverflow<a class="headerlink" href="#stackoverflow" title="Link to this heading">#</a></h2>
+<h1>Stackoverflow<a class="headerlink" href="#stackoverflow" title="Link to this heading">#</a></h1>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Top_StackOverflow_Tags.png" /></p>
 </section>
 <section id="github">
-<h2><a class="reference external" href="https://octoverse.github.com/2022/top-programming-languages">GitHub</a><a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
+<h1><a class="reference external" href="https://octoverse.github.com/2022/top-programming-languages">GitHub</a><a class="headerlink" href="#github" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>Javascript</p></li>
 <li><p>Python</p></li>
@@ -428,7 +433,6 @@ document.write(`
 <li><p>C</p></li>
 <li><p>Ruby</p></li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -477,9 +481,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stackoverflow">Stackoverflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Stackoverflow</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
