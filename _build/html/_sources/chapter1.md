@@ -191,7 +191,7 @@ Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
 ## Shell
 
 ```sh
-# Automated webApp embed on 06/27
+# User-defined inputs for abi/abikesa_jbb.sh; substantive edits on 08/14/2023:
 read -p "Enter your GitHub username: " GITHUB_USERNAME
 read -p "Enter your GitHub repository name: " REPO_NAME
 read -p "Enter your email address: " EMAIL_ADDRESS
@@ -208,8 +208,7 @@ cd "$(eval echo $ROOT_DIR)"
 rm -rf $SUBDIR_NAME/_build; cuts runtimes by 90%+;
 rm -rf $SUBDIR_NAME/_build
 jb build $SUBDIR_NAME
-mkdir -p _build/html/assets && mkdir -p _build/html/assets/js && mkdir -p _build/html/assets/css
-cp risk.html _build/html/risk.html && cp assets/js/script.js _build/html/assets/js/script.js && cp assets/css/style.css _build/html/assets/css/style.css
+mkdir -p $SUBDIR_NAME/_build/html/app && cp -r $SUBDIR_NAME/app/* $SUBDIR_NAME/_build/html/app
 rm -rf $REPO_NAME
 
 if [ -d "$REPO_NAME" ]; then
@@ -256,6 +255,7 @@ ghp-import -n -p -f _build/html
 cd ..
 rm -rf $REPO_NAME
 echo "Jupyter Book content updated and pushed to $GITHUB_USERNAME/$REPO_NAME repository!"
+
 
 ```
 
