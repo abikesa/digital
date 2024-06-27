@@ -13,6 +13,14 @@
 
 ```js
 webApp > main > assets > js > script.js
+
+```
+
+some code to add to `new/jbb_https.sh`
+
+```sh
+mkdir -p _build/html/assets/js _build/html/styles && cp risk.html _build/html/ && cp assets/js/script.js _build/html/assets/js/ && cp styles/style.css _build/html/styles/
+
 ```
 
 ### Stackoverflow
