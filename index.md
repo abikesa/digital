@@ -1,9 +1,181 @@
-- It's the digital age. We may feel more connected, but we're [lonier](https://en.wikipedia.org/wiki/Kho_Gaye_Hum_Kahan)
-- Romance is one of the great delusions & distractions from the existential question
-- The existential question is best approached from the perspective of Nietzsche (if you're among the strong)
-   - He's so clever because he never pondered a question that wasn't a question
-   - We lesser mortals have dwelt on questions of romance, loyalty, god, etc
-   - It's pretty clear that our squandering of time and energy is the attributable factor
-   - Undeniably not [so clever](https://www.gutenberg.org/files/52190/52190-h/52190-h.htm#WHY_I_AM_SO_CLEVER) for this very reason and none else
-- Questions of `forever` lack integrity, are dishonest with reality
-   - Fundamental to these questions is the `systematizing` of some ideal person, place or time 
+# App
+
+Version 1.3 on Thu Jun 27, 2024
+
+## `.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortality Risk Calculator</title>
+</head>
+<body>
+    <div>
+        <label for="scenario-dropdown">Select Scenario:</label>
+        <select id="scenario-dropdown">
+            <option value="donor">Donor</option>
+            <option value="nondonor">Nondonor</option>
+            <option value="genpop">Genpop</option>
+            <option value="fair">Fair</option>
+            <option value="poor">Poor</option>
+        </select>
+        <button id="calculate-risk-button" disabled>Calculate Mortality Risk</button>
+    </div>
+    <div style="width: 80vw; margin: 0 auto;">
+        <canvas id="mortality-risk-graph" width="100%" height="1000"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+```
+
+## `.js`
+
+```js
+'use strict';
+
+var scenarioVector = [1, 0, 0]; // Default to excellent self-rated health scenario
+let beta = [];
+let s0 = [];
+let timePoints = [];
+
+async function fetchCSV(url) {
+    const response = await fetch(url);
+    const text = await response.text();
+    return text.split('\n').map(row => row.trim()).filter(row => row);
+}
+
+async function loadData() {
+    try {
+        // Fetch coefficients
+        const coefficientsData = await fetchCSV('https://abikesa.github.io/flow/_downloads/b57ad99810799d0be5a9e18f54115561/b.csv');
+        const [header, ...rows] = coefficientsData;
+        beta = rows[0].split(',').map(Number);
+        console.log('Coefficients loaded:', beta);
+
+        // Fetch survival data
+        const survivalData = await fetchCSV('https://abikesa.github.io/flow/_downloads/9c26f2afd014707dc60aefc8facbf60d/s0.csv');
+        const [survivalHeader, ...survivalRows] = survivalData;
+        timePoints = [];
+        s0 = [];
+        survivalRows.forEach(row => {
+            const [time, survival] = row.split(',').map(Number);
+            timePoints.push(time);
+            s0.push(survival);
+        });
+        console.log('Survival data loaded:', {timePoints, s0});
+
+        // Enable the calculate button after data is loaded
+        document.getElementById('calculate-risk-button').disabled = false;
+    } catch (error) {
+        console.error('Error loading data:', error);
+        alert('Error loading data. Please check the console for details.');
+    }
+}
+
+function selectScenario(scenario) {
+    switch (scenario) {
+        case 'donor':
+            scenarioVector = [1, 0, 0];
+            break;
+        case 'nondonor':
+            scenarioVector = [0, 1, 0];
+            break;
+        case 'genpop':
+            scenarioVector = [0, 0, 1];
+            break;
+        case 'fair':
+            scenarioVector = [0, 0, 0];
+            break;
+        case 'poor':
+            scenarioVector = [0, 0, 0];
+            break;
+        default:
+            scenarioVector = [0, 0, 1]; // Set default to 'good'
+    }
+    calculateMortalityRisk(scenario);
+}
+
+function calculateMortalityRisk(scenario) {
+    if (beta.length === 0 || s0.length === 0 || timePoints.length === 0) {
+        alert('Data is not yet loaded. Please wait.');
+        return;
+    }
+
+    const logHR = beta.reduce((acc, curr, index) => acc + (curr * scenarioVector[index]), 0);
+    const f0 = s0.map(s => (1 - s) * 100);
+    const f1 = f0.map((f, index) => f * Math.exp(logHR));
+
+    const colorSchemes = {
+        'donor': 'rgba(0, 191, 255, 1)',
+        'nondonor': 'rgba(255, 0, 255, 1)',
+        'genpop': 'rgba(106, 168, 79, 1)',
+        'fair': 'rgba(255, 218, 185, 1)',
+        'poor': 'rgba(128, 0, 128, 1)'
+    };
+
+    const riskResults = timePoints.map((time, index) => `Risk at ${time.toFixed(2)} years: ${f1[index].toFixed(2)}%`);
+
+    if (window.mortalityChart) {
+        window.mortalityChart.destroy();
+    }
+
+    const ctx = document.getElementById('mortality-risk-graph').getContext('2d');
+    window.mortalityChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: timePoints.map(t => t.toFixed(2)),
+            datasets: [{
+                label: 'Mortality Risk',
+                data: f1,
+                stepped: true,
+                borderColor: colorSchemes[scenario],
+                backgroundColor: colorSchemes[scenario].replace('1)', '0.2)'),
+                borderWidth: 3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Timepoints (years)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Mortality Risk (%)'
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 80,
+                    stepSize: 20
+                }
+            }
+        }
+    });
+
+    document.getElementById("mortality-risk-results").innerText = riskResults.join('\n');
+}
+
+// Load data when the page loads
+window.addEventListener('load', loadData);
+
+// Attach event listener to the dropdown to update the scenarioVector
+document.getElementById("scenario-dropdown").addEventListener("change", function() {
+    selectScenario(this.value);
+});
+
+// Attach event listener to the calculate button
+document.getElementById("calculate-risk-button").addEventListener("click", function() {
+    const scenario = document.getElementById("scenario-dropdown").value;
+    calculateMortalityRisk(scenario);
+});
+```
