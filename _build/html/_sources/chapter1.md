@@ -1,280 +1,77 @@
-# Versions
+# Available Resources for Developers
 
-Of the key files: `risk.html` and `script.js`
+## The Content
+That's an excellent approach. You're creating a comprehensive resource that combines educational content with interactive tools for patients. Here's a breakdown of how your current structure supports this goal:
 
-## Risk
+1. Educational Content:
+   - The Markdown files (chapter1.md, chapter2.md, chapter3.md, intro.md, index.md) likely contain the main educational content for patients.
+   - The Jupyter notebook (chapter2.ipynb) allows for interactive explanations, potentially with code examples or data visualizations.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mortality Risk Calculator</title>
-</head>
-<body>
-    <div>
-        <label for="scenario-dropdown">Select Scenario:</label>
-        <select id="scenario-dropdown">
-            <option value="donor">Donor</option>
-            <option value="nondonor">Nondonor</option>
-            <option value="genpop">Genpop</option>
-            <option value="fair">Fair</option>
-            <option value="poor">Poor</option>
-        </select>
-        <button id="calculate-risk-button" disabled>Calculate Mortality Risk</button>
-    </div>
-    <div style="width: 80vw; margin: 0 auto;">
-        <canvas id="mortality-risk-graph" width="100%" height="1000"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
-```
+2. Interactive App:
+   - The `app` directory houses your interactive application.
+   - `risk.html` is probably the main page for your interactive tool.
+   - The `assets` folder contains the necessary CSS (style.css) and JavaScript (script.js) to make your app functional and visually appealing.
 
-## Script
+3. Jupyter Book Structure:
+   - `_config.yml` and `_toc.yml` are used by Jupyter Book to configure the project and define the table of contents.
+   - The `_build` directory is where Jupyter Book will generate the final output.
 
-```js
-'use strict';
+4. Additional Resources:
+   - `references.bib` can be used to manage citations and create a bibliography for your educational content.
+   - `README.md` likely contains information about the project, how to set it up, or how to use it.
+   - `requirements.txt` lists the Python dependencies for your project.
 
-var scenarioVector = [1, 0, 0]; // Default to excellent self-rated health scenario
-let beta = [];
-let s0 = [];
-let timePoints = [];
+This structure allows you to create a seamless experience where patients can read through educational material and then interact with an app that helps them apply what they've learned. It's a powerful way to combine information delivery with practical application.
 
-async function fetchCSV(url) {
-    const response = await fetch(url);
-    const text = await response.text();
-    return text.split('\n').map(row => row.trim()).filter(row => row);
-}
+If you're looking to expand or improve this setup, you might consider:
 
-async function loadData() {
-    try {
-        // Fetch coefficients
-        const coefficientsData = await fetchCSV('https://abikesa.github.io/flow/_downloads/b57ad99810799d0be5a9e18f54115561/b.csv');
-        const [header, ...rows] = coefficientsData;
-        beta = rows[0].split(',').map(Number);
-        console.log('Coefficients loaded:', beta);
+1. Adding more interactive elements within the Jupyter notebooks.
+2. Ensuring your app is accessible and easy to use for patients with varying levels of technical skill.
+3. Incorporating patient feedback mechanisms to continuously improve both the educational content and the interactive app.
 
-        // Fetch survival data
-        const survivalData = await fetchCSV('https://abikesa.github.io/flow/_downloads/9c26f2afd014707dc60aefc8facbf60d/s0.csv');
-        const [survivalHeader, ...survivalRows] = survivalData;
-        timePoints = [];
-        s0 = [];
-        survivalRows.forEach(row => {
-            const [time, survival] = row.split(',').map(Number);
-            timePoints.push(time);
-            s0.push(survival);
-        });
-        console.log('Survival data loaded:', {timePoints, s0});
+Is there any specific aspect of this project you'd like to discuss further or need assistance with?
 
-        // Enable the calculate button after data is loaded
-        document.getElementById('calculate-risk-button').disabled = false;
-    } catch (error) {
-        console.error('Error loading data:', error);
-        alert('Error loading data. Please check the console for details.');
-    }
-}
+## Your Feedback
+Incorporating feedback into your project is an excellent way to improve its effectiveness and user experience. Here are several approaches you could consider:
 
-function selectScenario(scenario) {
-    switch (scenario) {
-        case 'donor':
-            scenarioVector = [1, 0, 0];
-            break;
-        case 'nondonor':
-            scenarioVector = [0, 1, 0];
-            break;
-        case 'genpop':
-            scenarioVector = [0, 0, 1];
-            break;
-        case 'fair':
-            scenarioVector = [0, 0, 0];
-            break;
-        case 'poor':
-            scenarioVector = [0, 0, 0];
-            break;
-        default:
-            scenarioVector = [0, 0, 1]; // Set default to 'good'
-    }
-    calculateMortalityRisk(scenario);
-}
+1. In-app feedback mechanism:
+   - Add a feedback form or button within your interactive app (risk.html).
+   - Use JavaScript to capture user input and store it locally or send it to a server.
 
-function calculateMortalityRisk(scenario) {
-    if (beta.length === 0 || s0.length === 0 || timePoints.length === 0) {
-        alert('Data is not yet loaded. Please wait.');
-        return;
-    }
+2. Comment system in Jupyter Book:
+   - Jupyter Book supports adding comments to pages using services like Hypothes.is or Utterances.
+   - This allows readers to leave feedback directly on specific content.
 
-    const logHR = beta.reduce((acc, curr, index) => acc + (curr * scenarioVector[index]), 0);
-    const f0 = s0.map(s => (1 - s) * 100);
-    const f1 = f0.map((f, index) => f * Math.exp(logHR));
+3. Surveys:
+   - Create periodic surveys using tools like Google Forms or SurveyMonkey.
+   - Link to these surveys from your Jupyter Book pages or app.
 
-    const colorSchemes = {
-        'donor': 'rgba(0, 191, 255, 1)',
-        'nondonor': 'rgba(255, 0, 255, 1)',
-        'genpop': 'rgba(106, 168, 79, 1)',
-        'fair': 'rgba(255, 218, 185, 1)',
-        'poor': 'rgba(128, 0, 128, 1)'
-    };
+4. User testing sessions:
+   - Conduct structured user testing sessions with patients.
+   - Observe how they interact with your content and app, noting any difficulties or suggestions.
 
-    const riskResults = timePoints.map((time, index) => `Risk at ${time.toFixed(2)} years: ${f1[index].toFixed(2)}%`);
+5. Analytics:
+   - Implement web analytics (e.g., Google Analytics) to track user behavior.
+   - This can provide insights into which content is most viewed or where users might be struggling.
 
-    if (window.mortalityChart) {
-        window.mortalityChart.destroy();
-    }
+6. Email feedback:
+   - Provide an email address for users to send detailed feedback or questions.
 
-    const ctx = document.getElementById('mortality-risk-graph').getContext('2d');
-    window.mortalityChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: timePoints.map(t => t.toFixed(2)),
-            datasets: [{
-                label: 'Mortality Risk',
-                data: f1,
-                stepped: true,
-                borderColor: colorSchemes[scenario],
-                backgroundColor: colorSchemes[scenario].replace('1)', '0.2)'),
-                borderWidth: 3
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Timepoints (years)'
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Mortality Risk (%)'
-                    },
-                    suggestedMin: 0,
-                    suggestedMax: 80,
-                    stepSize: 20
-                }
-            }
-        }
-    });
+7. Interactive elements:
+   - Add quick reaction buttons (e.g., "Was this helpful?") at the end of each chapter.
+   - Use JavaScript to capture these reactions.
 
-    document.getElementById("mortality-risk-results").innerText = riskResults.join('\n');
-}
+8. GitHub Issues:
+   - If your project is open-source, encourage users to submit issues or feature requests via GitHub.
 
-// Load data when the page loads
-window.addEventListener('load', loadData);
+To implement these, you might need to:
 
-// Attach event listener to the dropdown to update the scenarioVector
-document.getElementById("scenario-dropdown").addEventListener("change", function() {
-    selectScenario(this.value);
-});
+1. Modify your `risk.html` to include feedback forms or buttons.
+2. Update `script.js` to handle feedback submission.
+3. Add necessary configurations to `_config.yml` for comment systems.
+4. Create new HTML/JS files for more complex feedback mechanisms.
+5. Set up a backend system to receive and store feedback (this might require additional server-side code).
 
-// Attach event listener to the calculate button
-document.getElementById("calculate-risk-button").addEventListener("click", function() {
-    const scenario = document.getElementById("scenario-dropdown").value;
-    calculateMortalityRisk(scenario);
-});
-```
+Remember to consider data privacy and security when collecting user feedback, especially in a healthcare context. Always be clear about how you'll use the feedback and protect user information.
 
-```{note}
-Thu Jun 27 12:11 PM
-```
-
-It will be rendered in a special box when you build your book.
-
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
-
-## Shell
-
-```sh
-# User-defined inputs for abi/abikesa_jbb.sh; substantive edits on 08/14/2023:
-read -p "Enter your GitHub username: " GITHUB_USERNAME
-read -p "Enter your GitHub repository name: " REPO_NAME
-read -p "Enter your email address: " EMAIL_ADDRESS
-read -p "Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology): " ROOT_DIR
-read -p "Enter the name of the subdirectory to be built within the root directory: " SUBDIR_NAME
-read -p "Enter your commit statement: " COMMIT_THIS
-
-# Build the book with Jupyter Book
-git config --local user.name "$GITHUB_USERNAME"
-git config --local user.email "$EMAIL_ADDRESS"
-
-cd "$(eval echo $ROOT_DIR)"
-
-rm -rf $SUBDIR_NAME/_build; cuts runtimes by 90%+;
-rm -rf $SUBDIR_NAME/_build
-jb build $SUBDIR_NAME
-mkdir -p $SUBDIR_NAME/_build/html/app && cp -r $SUBDIR_NAME/app/* $SUBDIR_NAME/_build/html/app
-rm -rf $REPO_NAME
-
-if [ -d "$REPO_NAME" ]; then
-  echo "Directory $REPO_NAME already exists. Choose another directory or delete the existing one."
-  exit 1
-fi
-
-# Cloning
-git clone "https://github.com/$GITHUB_USERNAME/$REPO_NAME.git"
-if [ ! -d "$REPO_NAME" ]; then
-  echo "Failed to clone the repository. Check your GitHub username, repository name, and permissions."
-  exit 1
-fi
-
-# Copy files from subdirectory to the current repository directory; restored $REPO_NAME!!!
-cp -r $SUBDIR_NAME/* $REPO_NAME
-cd $REPO_NAME
-
-git add ./*
-git commit -m "$COMMIT_THIS"
-git remote -v
-
-git remote set-url origin "https://github.com/$GITHUB_USERNAME/$REPO_NAME.git"
-git config --local user.name "$GITHUB_USERNAME"
-git config --local user.email "$EMAIL_ADDRESS"
-
-# Checkout the main branch
-git checkout main
-if [ $? -ne 0 ]; then
-  echo "Failed to checkout the main branch. Make sure it exists in the repository."
-  exit 1
-fi
-
-# Pushing changes
-# git config pull.rebase true
-# git pull
-git push -u origin main
-if [ $? -ne 0 ]; then
-  echo "Failed to push to the repository. Check your credentials and GitHub permissions."
-  exit 1
-fi
-
-ghp-import -n -p -f _build/html
-cd ..
-rm -rf $REPO_NAME
-echo "Jupyter Book content updated and pushed to $GITHUB_USERNAME/$REPO_NAME repository!"
-
-
-```
-
-## Citations
-
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
-
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
-
-```{bibliography}
-```
-
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
+Would you like more detailed information on implementing any of these feedback methods?
