@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dictation &#8212; Digital Age</title>
+    <title>Dictation as the Natural User-input &#8212; Digital Age</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Justification" href="chapter3.html" />
+    <link rel="next" title="Justification of Pushing Tech Bounds" href="chapter3.html" />
     <link rel="prev" title="Available Resources for Developers" href="chapter1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,8 +181,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chapter1.html">Available Resources for Developers</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dictation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Justification</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dictation as the Natural User-input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">Justification of Pushing Tech Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">Now Lets Get Down to Technical Stuff</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="chapter5.html">We Should Find a Way to Automate This</a></li>
 </ul>
 
     </div>
@@ -366,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dictation</h1>
+    <h1>Dictation as the Natural User-input</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,8 +383,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="dictation">
-<h1>Dictation<a class="headerlink" href="#dictation" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="dictation-as-the-natural-user-input">
+<h1>Dictation as the Natural User-input<a class="headerlink" href="#dictation-as-the-natural-user-input" title="Link to this heading">#</a></h1>
 <p>Certainly. I’ll provide an updated version of your JavaScript code that incorporates the speech recognition feature while focusing on the donor, nondonor, and general population scenarios. Here’s the updated script from top to bottom:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 
@@ -588,7 +591,12 @@ document.write(`
 <p>Remember that speech recognition may not work in all browsers and requires an internet connection. Also, the accuracy of speech recognition can vary based on factors like accent, background noise, and microphone quality.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">cycler</span> <span class="kn">import</span> <span class="n">cycler</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+
+<span class="c1"># Fixing random state for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
 
 <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
@@ -610,17 +618,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Fixing random state for reproducibility</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
-</pre></div>
-</div>
+<img alt="_images/2149358dac35d873f402560f19e01db405c00509b4d2e9f5a8f858e9149c2703.png" src="_images/2149358dac35d873f402560f19e01db405c00509b4d2e9f5a8f858e9149c2703.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
@@ -671,7 +669,7 @@ with your book. For more information about this, see <a class="reference externa
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Justification</p>
+        <p class="prev-next-title">Justification of Pushing Tech Bounds</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
