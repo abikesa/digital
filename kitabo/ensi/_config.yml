@@ -4,10 +4,10 @@
 
 #######################################################################################
 # Book settings
-title                       : Pyrrus # The title of the book. Will be placed in the left navbar.
+title                       : In Your Hands # The title of the book. Will be placed in the left navbar.
 author                      :  # The author of the book
 copyright                   : "2025"  # Copyright year to be placed in the footer
-logo                        :  https://m.media-amazon.com/images/I/61PEEATjb+L._SL1360_.jpg # figures/logo.png # A path to the book logo
+logo                        :  https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1 # figures/logo.png # A path to the book logo
 email                       : "abikesa.sh@gmail.com"
 exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
