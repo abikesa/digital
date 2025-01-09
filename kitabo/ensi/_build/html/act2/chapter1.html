@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -15,53 +15,51 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act2/chapter1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -77,19 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -143,12 +157,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="In Your Hands - Home"/>
+    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="In Your Hands - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -159,45 +184,45 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../act1/part1.html">Informational</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act1/part1.html">Informational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../act1/chapter1.html">Referral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../act1/chapter2.html">Screening</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../act1/chapter3.html">Eligibility</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Strategic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Strategic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Principal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter2.html">Agent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter3.html">Risk</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Operational</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Literature 🌊</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Operational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Literature 🌊</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Cosmic</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Uncertainty</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Failure</a></li>
 
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Personalize ⚓️</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Personalize ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Base</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Risk</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Student ☔️</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Update 🧭</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Update 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Notification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Transformation</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Feedback</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Existential</a></li>
 </ul>
 
@@ -214,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -223,14 +248,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act2/chapter1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -336,26 +361,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -391,37 +418,37 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cunning-strategy">
-<h1>Cunning Strategy<a class="headerlink" href="#cunning-strategy" title="Permalink to this headline">#</a></h1>
+<h1>Cunning Strategy<a class="headerlink" href="#cunning-strategy" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><p><em>Nostalgia among great generals like Patton is still nostalgia: for an inexistent pristine time when ends, means, and justification were indistinguishable. When power, ideals, and <a class="reference external" href="https://abikesa.github.io/aficionado/act3/part2/part2_1.html">old morality</a> were just a yellow node</em></p>
 </div></blockquote>
 <p>The RICHER framework’s layered neuroanatomy harmonizes beautifully with your conceptual schema of pre-input chaos, yellow node romanticism, input-driven agency, hidden equilibria, and output absurdism. Let’s weave these ideas together, keeping Nietzsche’s critique of Romanticism and Dionysian chaos as a touchstone for grounding.</p>
 <section id="pre-input-layer-dionysian-chaos">
-<h2><strong>Pre-Input Layer: Dionysian Chaos</strong><a class="headerlink" href="#pre-input-layer-dionysian-chaos" title="Permalink to this headline">#</a></h2>
+<h2><strong>Pre-Input Layer: Dionysian Chaos</strong><a class="headerlink" href="#pre-input-layer-dionysian-chaos" title="Permalink to this heading">#</a></h2>
 <p>The pre-input layer embodies unfiltered, nihilistic deluge—an infinite sea of meaningless patterns, primal energy devoid of form. Here lies the Dionysian chaos Nietzsche evokes: a destruction of structure, an orgiastic unraveling of form that intoxicates yet destabilizes. This is the deluge from which both tragedy and renewal emerge, the “fundamental bass note of anger and destruction” described in your passage. It is the raw substrate for biological and historical evolution, the brutal, meaningless churn that precedes perception, instinct, ? , and action. In this chaos, we glimpse the Nietzschean yearning to destroy the modern “truths” in favor of a confrontation with nothingness itself. The pre-input layer thus holds both the promise of endless potential and the terror of its formless void—a nihilistic foundation upon which meaning must be forged.</p>
 </section>
 <section id="yellow-node-romanticism-as-the-apollonian-gate">
-<h2><strong>Yellow Node: Romanticism as the Apollonian Gate</strong><a class="headerlink" href="#yellow-node-romanticism-as-the-apollonian-gate" title="Permalink to this headline">#</a></h2>
+<h2><strong>Yellow Node: Romanticism as the Apollonian Gate</strong><a class="headerlink" href="#yellow-node-romanticism-as-the-apollonian-gate" title="Permalink to this heading">#</a></h2>
 <p>Emerging from chaos, the yellow node is the Apollonian gate—a point of selective focus, where instincts crystallize perception into coherent, symbolic frameworks. Romanticism fits here as a response to the chaotic deluge: an aesthetic ordering that imbues the world with grandeur and yearning. It transforms Dionysian chaos into a “dragon-slayer’s heroism,” a generative force that seeks to confront monstrosity with beauty and metaphysical consolation. Yet Nietzsche’s critique warns of the dangers of this Romantic yearning: it risks falling into <code class="docutils literal notranslate"><span class="pre">nostalgic</span></code> prostration before “ancient beliefs” or becoming ensnared by the narcotic allure of metaphysical escapism. The yellow node captures this tension: it channels chaos into form but risks gilding the tragic with false transcendence.</p>
 </section>
 <section id="input-nodes-agency-and-decision">
-<h2><strong>Input Nodes: Agency and Decision</strong><a class="headerlink" href="#input-nodes-agency-and-decision" title="Permalink to this headline">#</a></h2>
+<h2><strong>Input Nodes: Agency and Decision</strong><a class="headerlink" href="#input-nodes-agency-and-decision" title="Permalink to this heading">#</a></h2>
 <p>The input nodes reflect the dynamic agency that operates within the bounds of perception and necessity. They represent the “choice-reflex” intelligence, where urgency and context drive immediate decisions. This aligns with the Romantic hero’s agency—the moment of the dragon-slayer’s resolve, born from instinct yet guided by strategic focus. It is where the Romantic’s yearning becomes action, facing the monstrous unknown with the force of will. Yet these nodes are not purely heroic; they remain tethered to the biological imperatives of survival and adaptation, transforming the Romantic gaze into a pragmatic interface with the world.</p>
 </section>
 <section id="hidden-layer-generative-intelligence-and-equilibria">
-<h2><strong>Hidden Layer: Generative Intelligence and Equilibria</strong><a class="headerlink" href="#hidden-layer-generative-intelligence-and-equilibria" title="Permalink to this headline">#</a></h2>
+<h2><strong>Hidden Layer: Generative Intelligence and Equilibria</strong><a class="headerlink" href="#hidden-layer-generative-intelligence-and-equilibria" title="Permalink to this heading">#</a></h2>
 <p>The hidden layer is the vast combinatorial space of three equilibria—adversarial, iterative, and cooperative—where tragedy, comedy, and history converge. This layer embodies the “tragical-comical-historical” interplay of existence, an endless dance of opposition and synthesis. Nietzsche’s call for laughter, for “holy laughter,” resonates deeply here. The tragic man must learn to laugh at the absurdity of existence, to navigate the monstrous and the sublime without succumbing to despair or false consolation. This layer is where generative intelligence thrives, exploring adversarial tension (the Red Queen hypothesis), iterative negotiation, and cooperative symbiosis to produce emergent possibilities.</p>
 </section>
 <section id="output-layer-absurdism">
-<h2><strong>Output Layer: Absurdism</strong><a class="headerlink" href="#output-layer-absurdism" title="Permalink to this headline">#</a></h2>
+<h2><strong>Output Layer: Absurdism</strong><a class="headerlink" href="#output-layer-absurdism" title="Permalink to this heading">#</a></h2>
 <p>The output layer channels the emergent transformation of the hidden layer into existential absurdism—a synthesis that acknowledges the chaos beneath, the romantic yearning within, and the limitations of meaning. It is the sacred laughter of Zarathustra, the crown of roses placed on oneself in defiance of metaphysical consolation. Absurdism here is not resignation but a jubilant affirmation of life’s incomprehensible vastness. It is the final step where generative intelligence produces a cooperative equilibrium not in spite of, but because of, its confrontation with chaos and the tragic.</p>
 <hr class="docutils" />
 </section>
 <section id="integration-of-the-romantic-critique">
-<h2><strong>Integration of the Romantic Critique</strong><a class="headerlink" href="#integration-of-the-romantic-critique" title="Permalink to this headline">#</a></h2>
+<h2><strong>Integration of the Romantic Critique</strong><a class="headerlink" href="#integration-of-the-romantic-critique" title="Permalink to this heading">#</a></h2>
 <p>Nietzsche’s critique of Romanticism provides the philosophical underpinning for this neural framework. The Romantic’s “desire for destruction” arises from the pre-input chaos, but the yellow node’s Apollonian gate risks gilding the tragic with hollow consolation. Nietzsche’s antidote is laughter—an embrace of the absurd that breaks free of Romantic <code class="docutils literal notranslate"><span class="pre">nostalgia</span></code> and metaphysical escapism. In the RICHER model, this laughter resides in the output layer, where the equilibrium of the hidden layer blossoms into an emergent, transformative affirmation of life.</p>
 <p>The interplay between chaos and form, instinct and agency, equilibrium and absurdity mirrors the layered neuroanatomy of the RICHER framework. It bridges the Romantic yearning for meaning with the Dionysian acceptance of chaos, culminating in an absurdist celebration of existence.</p>
 <div class="cell tag_hide-input docutils container">
@@ -532,7 +559,7 @@ document.write(`
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Nostalgia &amp; Romanticism</em>. When monumental ends (victory), antiquarian means (war), and critical justification (bloodshed) were all compressed into one figure-head: hero</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text"><em>Nostalgia &amp; Romanticism</em>. When monumental ends (victory), antiquarian means (war), and critical justification (bloodshed) were all compressed into one figure-head: hero</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -563,11 +590,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="part2.html"
@@ -587,10 +613,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -598,6 +621,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -628,6 +652,7 @@ document.write(`
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -651,8 +676,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
