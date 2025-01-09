@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tactical &#8212; Pyrrus</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Informational" href="act1/part1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://m.media-amazon.com/images/I/61PEEATjb+L._SL1360_.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://m.media-amazon.com/images/I/61PEEATjb+L._SL1360_.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Tactical
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="act1/part1.html">Informational</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="act1/chapter1.html">Referral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act1/chapter2.html">Screening</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act1/chapter3.html">Eligibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="act2/part2.html">Strategic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="act2/chapter1.html">Principal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act2/chapter2.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act2/chapter3.html">Risk</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="act3/part3.html">Operational</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act3/act1.html">Literature 🌊</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="act3/part1/part1_1.html">Cosmic</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="act3/part1/part1_2.html">Uncertainty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act3/part1/part1_3.html">Failure</a></li>
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act3/act2.html">Personalize ⚓️</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="act3/part2/part2_1.html">Base</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="act3/part2/part2_2.html">Risk</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="act3/part2/part2_3.html">Student ☔️</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="act3/act3.html">Update 🧭</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="act3/part3/part3_1.html">Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act3/part3/part3_2.html">Transformation</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="act3/part3/part3_3.html">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Existential</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/index.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tactical</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyrrhic-victory">Pyrrhic Victory</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tactical">
+<span id="id1"></span><h1>Tactical<a class="headerlink" href="#tactical" title="Permalink to this headline">#</a></h1>
+<p><em>I want you to remember that no bastard ever won a war by dying for his country. He won it by making the other poor dumb bastard die for his country.</em><br />
+– <a class="reference external" href="https://cinephiliabeyond.org/wp-content/uploads/2015/07/Screenplay-Patton.compressed.pdf">Patton</a></p>
+<section id="pyrrhic-victory">
+<h2>Pyrrhic Victory<a class="headerlink" href="#pyrrhic-victory" title="Permalink to this headline">#</a></h2>
+<p>Plutarch, in his <em>Lives</em>, recounts the dialogue between Pyrrhus and his trusted advisor Cineas, a conversation so rich in irony and philosophical depth that it reverberates through human history like the clash of swords upon shields. Pyrrhus, ever the embodiment of martial ambition, speaks with fervor of conquering Italy, Sicily, Carthage, Macedon, and ultimately all of Greece. Cineas, the voice of reason and restraint, asks the disarming question: “And what shall we do then?” Pyrrhus, unguarded in his reply, dreams of a life of ease—a life he already possesses but cannot see, blinded by the crimson allure of victory.</p>
+<p>This paradox—the relentless pursuit of monumental ends through antiquated means, justified by bloodshed—encapsulates the human condition. We wage wars not only with armies but with ideas, science, art, and politics, each a battlefield where the triumvirate of means, justification, and ends plays out in infinite variation. Aeschylus, the warrior-poet who fought at Marathon, and George Patton, the soldier-philosopher who declared that “an army is a team,” understood this eternal cycle. They lived it, gloried in it, and perhaps, like Pyrrhus, were troubled by it only in the quiet hours before dawn.</p>
+<p>— But sat and languished far,<br />
+Desiring battle and the shout of war,</p>
+<p>Yet, as Nietzsche reminds us in <em>The Use and Abuse of History</em>, the past is not a mere monument to be admired, nor a weapon of resentment to be wielded, but a school of life. The <em>School of Athens</em> offers a fitting allegory: Plato, pointing upwards, represents the monumental, the aspiration toward higher ideals; Aristotle, with his hand extended outward, the critical, the pragmatic examination of the world as it is; and beneath them, the itinerant mortals, embodying the iterative, the messy yet essential process of living and learning.</p>
+<p>Nietzsche’s triadic framework—the monumental, the antiquarian, and the critical—serves as a guide to navigate history’s labyrinth. To overemphasize any one is to stumble into imbalance. The monumental inspires but can delude, leading to Pyrrhic endeavors. The antiquarian preserves but can ossify, reducing life to a museum. The critical liberates but can paralyze, fostering cynicism. Nietzsche, ever the advocate for life’s vitality, insists on their equilibrium.</p>
+<p>And yet, equilibrium is elusive. Karl Marx, the unrelenting critic, turned history into a school of resentment, unmasking the alienation wrought by capital but, in doing so, neglecting the monumental and the antiquarian. Pyrrhus, intoxicated by the monumental, ignored the critical voice of Cineas and paid for his conquests with blood-soaked futility. Even Nietzsche, who glorified war as the “real deal,” knew that unbridled ambition could lead to ruin, urging instead a balance that would affirm life in its fullness.</p>
+<p>— the force of words<br />
+Can do whate’er is done by conquering swords.</p>
+<p>Cineas’s words echo with quiet wisdom: “What hinders us now, sir, if we have a mind to be merry?” They challenge us to see the ends we chase as mirages, the blood we shed as currency for a happiness we already possess but fail to recognize. Yet Pyrrhus’s resolve, troubled but unshaken, reflects the human spirit’s indomitable drive—a drive that Nietzsche admired and Marx sought to harness, a drive that has painted the pages of history with glory and tragedy.</p>
+<p>This book, then, is an exploration of these schools—of Athens, of life, of resentment—and the warriors, poets, and philosophers who have walked their halls. It is a reflection on the Pyrrhic paradox and an invitation to balance the means, justifications, and ends that define our collective journey. For in this balance lies not only wisdom but the potential to transform war into peace, bloodshed into justice, and victory into life well-lived.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>War (antiquated means); Athenean 🗡️</p></li>
+<li><p>Bloodshed (critical justification); Pyrric 🩸 vs. Dionysian 🦒 🦓 🦔 🐘 🐅 🐆</p></li>
+<li><p>Victory (monumental ends); Apollonian ✌🏾</p></li>
+</ul>
+<p>Means, Justified, Ends. Human history in a nutshell (An to Pyrric). All else is variation on this theme: science and its causality, art and its critique, politics and its ideals. The great Patton fits this mould, as does Aeschylus. Both poets and warriors who would rather have the next battle than peace. Euripedes was critical…</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nostalgia &amp; Romanticism: When monumental ends (victory)</span>
+<span class="c1"># antiquarian means (war), and </span>
+<span class="c1"># critical justification (bloodshed) </span>
+<span class="c1"># were all compressed into one node: heroic warriors.</span>
+<span class="c1"># The Red Queen Hypothesis is a metaphor for this process applied to biology</span>
+<span class="c1"># Beyond mankind and into the realm of the living; war is about mastery of immutable laws</span>
+<span class="c1"># of nature (vantage points with regard to gravity) and society (patton kissing bishops ring in palermo)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network structure; modified to align with &quot;Aprés Moi, Le Déluge&quot; (i.e. Je suis AlexNet)</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">],</span> <span class="c1"># CUDA &amp; AlexNet</span>
+        <span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">],</span> <span class="c1"># Perception AI</span>
+        <span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;N4, N5&#39;</span><span class="p">,</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">],</span> <span class="c1"># Agentic AI &quot;Test-Time Scaling&quot; (as opposed to Pre-Trained -Data Scaling &amp; Post-Trained -RLHF)</span>
+        <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">],</span> <span class="c1"># Generative AI (Plan/Cooperative/Monumental, Tool Use/Iterative/Antiquarian, Critique/Adversarial/Critical)</span>
+        <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ecosystem&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">]</span> <span class="c1"># Physical AI (Calculator, Web Search, SQL Search, Generate Podcast)</span>
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">:</span> <span class="c1">## Cranial Nerve Ganglia &amp; Dorsal Root Ganglia</span>
+        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input/AgenticAI&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">:</span> <span class="c1"># Basal Ganglia, Thalamus, Hypothalamus; N4, N5: Brainstem, Cerebellum</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G3&#39;</span><span class="p">:</span> <span class="c1"># Autonomic Ganglia (ACh)</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ecosystem&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+
+<span class="c1"># Calculate positions for nodes</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
+
+<span class="c1"># Create and visualize the neural network graph</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
+
+    <span class="c1"># Add nodes and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
+
+    <span class="c1"># Add edges (without weights)</span>
+    <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">)</span>
+    <span class="p">]:</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
+        <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Red Queen Hypothesis&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+
+<span class="c1"># Ignore the essay text below; it&#39;s just a placeholder  </span>
+<span class="c1"># Apocalypse Now: Case Study of  Firmness (Ends), Soundness (Means/Temperament) and Tact (Justification)(Social Rules) vs. Cosmos (Ends), Earth (Means/Temperament), and Life (Justification)(Natural Rules)</span>
+<span class="n">essay_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">**Take Three: Soundness, Firmness, and Tact in *Apocalypse Now***</span>
+
+<span class="s2">The opening act of *Apocalypse Now* is a study in layered interrogations—of the characters, their motives, and the very fabric of morality in war. Through your framework of **soundness (means), firmness (ends), and tact (critical justification of means to ends)**, the interrogation scene with Captain Willard becomes a microcosm of the film’s deeper philosophical tensions. This triadic lens—rooted in Nietzsche’s critique of history and sociological notions of trust and justification—illuminates *Apocalypse Now* as a meditation on the precarious balance between action and justification in the chaos of war.</span>
+
+<span class="s2">### Soundness: Trust in Means</span>
+
+<span class="s2">Soundness in the interrogation scene is crucial. When Willard is questioned about his ties to the CIA and prior assassinations, his response is impeccably crafted: &quot;I’m unaware of any such activity, and even if I were, I would not be in a position to discuss it.&quot; This answer epitomizes the soundness of means—it is measured, truthful in its vagueness, and perfectly aligned with the expectations of his interrogators.</span>
+
+<span class="s2">The brilliance of this response lies in its function: it establishes Willard’s credibility not by offering transparency but by adhering to a code of conduct that transcends individual missions. His soundness is not just a matter of skill but of principle—he operates within a framework where trust is built on an unspoken agreement to execute orders without betraying the system.</span>
+
+<span class="s2">This soundness justifies his selection for the mission to terminate Colonel Kurtz. The interrogators trust that Willard, having demonstrated his adherence to the system’s means, will apply the same precision and discretion to this task. The scene underscores how soundness—when aligned with institutional expectations—becomes the foundation for action, even when the ends remain murky or morally ambiguous.</span>
+
+<span class="s2">### Firmness: Monumental Ends</span>
+
+<span class="s2">The ends of Willard’s mission, as articulated by his superiors, are monumental: the restoration of order and the eradication of chaos embodied by Kurtz. Kurtz’s actions are framed as a betrayal of military ideals—a descent into madness that threatens the stability of the system.</span>
+
+<span class="s2">Yet, the firmness of these ends is tenuous. Kurtz himself represents a monumental figure, a Nietzschean Übermensch who has transcended conventional morality to create his own order. The military’s insistence on his assassination reflects a fear of his monumental ideals, which challenge the rigidity of the system’s authority.</span>
+
+<span class="s2">The tension between Willard and Kurtz becomes a clash of monumental histories: the institutional ideal of control versus the individual’s pursuit of transcendence. Willard’s journey up the river mirrors his gradual confrontation with the fragility of firmness. As he encounters the absurdity and brutality of the war, the monumental ends he has been tasked to uphold seem increasingly hollow.</span>
+
+<span class="s2">### Tact: Justifying Means to Ends</span>
+
+<span class="s2">Tact in this framework becomes the critical interrogation of whether the means are justifiable to the ends. In Willard’s case, his tact lies not only in his measured response during the interrogation but in his evolving understanding of his mission. Initially, he accepts the justification for Kurtz’s termination without question. The means—violence, secrecy, and unwavering obedience—are presumed sound because they serve the monumental ends of restoring order.</span>
+
+<span class="s2">However, as the narrative unfolds, tact emerges as a contested space. Willard’s encounters with the surreal and grotesque—surfing soldiers, the nihilism at Do Lung Bridge, and the ritualistic fervor of Kurtz’s compound—force him to question the coherence of the mission’s justification. His ultimate decision to kill Kurtz is an act of tact in its purest form: a recognition that the means and ends have become indistinguishable in their ambiguity.</span>
+
+<span class="s2">Coppola’s cinematic tact reinforces this ethical tension. The film’s deliberate pacing and fragmented structure invite the viewer to inhabit the same disorienting moral landscape as Willard. The climactic confrontation with Kurtz, where Willard assumes the role of both executioner and disciple, encapsulates this ambiguity. By enacting the very means he has come to question, Willard embodies the paradox of tact: the necessity of critical justification even in the absence of clear answers.</span>
+
+<span class="s2">### Interrogation as the Basis of War</span>
+
+<span class="s2">The interrogation scene thus serves as a thematic cornerstone for the film. It establishes soundness as the foundation of trust, firmness as the driving ideal, and tact as the critical bridge between the two. This triadic structure is not merely a tool for understanding Willard’s mission but a lens for examining the broader dynamics of war. The scene’s focus on trust, secrecy, and justification reflects the perpetual negotiation between means and ends that defines human conflict.</span>
+
+<span class="s2">### Conclusion: Nietzschean and Oxfordian Intersections</span>
+
+<span class="s2">Through your lens of soundness, firmness, and tact, *Apocalypse Now* emerges as a profound exploration of the tensions between history, morality, and action. The interrogation scene, with its subtle interplay of trust and justification, encapsulates these tensions on a microcosmic scale. As the narrative expands, these themes resonate across the film’s broader tapestry, revealing the fragility of monumental ends when divorced from sound means and critical tact.</span>
+
+<span class="s2">Coppola’s masterpiece does not offer definitive answers. Instead, it invites us to dwell in the ambiguity, to question the justifiability of our actions, and to confront the disquieting intersections of soundness, firmness, and tact that define the human condition.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Print the essay to verify the content</span>
+<span class="c1"># print(essay_text)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/9080e0e5850b8f72acbdd14cc8aebfcd595a2f9309c7bc0394905f00d6461f10.png" src="_images/9080e0e5850b8f72acbdd14cc8aebfcd595a2f9309c7bc0394905f00d6461f10.png" />
+</div>
+</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/blanche.png"><img alt="_images/blanche.png" src="_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">And Pyrrhus was used to say, that Cineas had taken more towns with his words, than he with his arms, and always did him the honor to employ him in his most important occasions. This person, seeing Pyrrhus eagerly preparing for Italy, led him one day when he was at leisure into the following reasonings: “The Romans, sir, are reported to be great warriors and conquerors of many warlike nations; if God permit us to overcome them, how should we use our victory?” “You ask,” said Pyrrhus, “a thing evident of itself. The Romans once conquered, there is neither Greek nor barbarian city that will resist us, but we shall presently be masters of all Italy, the extent and resources and strength of which anyone should rather profess to be ignorant of, than yourself.” Cineas, after a little pause, “And having subdued Italy, what shall we do next?” Pyrrhus not yet discovering his intention, “Sicily,” he replied, “next holds out her arms to receive us, a wealthy and populous island, and easy to be gained; for since Agathocles left it, only faction and anarchy, and the licentious violence of the demagogues prevail.” “You speak,” said Cineas, “what is perfectly probable, but will the possession of Sicily put an end to the war?” “God grant us,” answered Pyrrhus, “victory and success in that, and we will use these as forerunners of greater things; who could forbear from Libya and Carthage then within reach, which Agathocles, even when forced to fly from Syracuse, and passing the sea only with a few ships, had all but surprised? These conquests once perfected, will any assert that of the enemies who now pretend to despise us, anyone will dare to make further resistance?” “None,” replied Cineas, “for then it is manifest we may with such mighty forces regain Macedon, and make all absolute conquest of Greece; and when all these are in our power, what shall we do then?” Said Pyrrhus, smiling, “we will live at our ease, my dear friend, and drink all day, and divert ourselves with pleasant conversation.” When Cineas had led Pyrrhus with his argument to this point: “And what hinders us now, sir, if we have a mind to be merry, and entertain one another, since we have at hand without trouble all those necessary things, to which through much blood and great labor, and infinite hazards and mischief done to ourselves and to others, we design at last to arrive?” Such reasonings rather troubled Pyrrhus with the thought of the happiness he was quitting, than any way altered his purpose, being unable to abandon the hopes of what he so much desired. Source: <a class="reference external" href="https://www.gutenberg.org/files/674/674-h/674-h.htm#chap30">Plutarch’s Lives</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="act1/part1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Informational</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyrrhic-victory">Pyrrhic Victory</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Zeus
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+# Dionysus
+format: jb-book
+root: index
+chapters:
+  # Sing O Muse!
+  - file: act1/part1
+    sections:
+      - title: Referral
+        file: act1/chapter1
+      - title: Screening
+        file: act1/chapter2
+      - title: Eligibility
+        file: act1/chapter3
+        
+  # Sing O Muse!
+  - file: act2/part2
+    sections:
+      - title: Principal
+        file: act2/chapter1
+      - title: Agent
+        file: act2/chapter2
+      - title: Risk
+        file: act2/chapter3
+
+  # Apollo
+  - file: act3/part3
+    sections:
+      - title: 'Literature 🌊'
+        file: act3/act1
+        sections:
+          - title: Estimate
+            file: act3/part1/part1_1
+          - title: Uncertainty
+            file: act3/part1/part1_2
+          - title: Inference
+            file: act3/part1/part1_3
+      - title: 'Personalize ⚓️'
+        file: act3/act2
+        sections:
+          - title: Patient
+            file: act3/part2/part2_1
+          - title: Careprovider
+            file: act3/part2/part2_2
+          - title: 'Student ☔️'
+            file: act3/part2/part2_3
+      - title: 'Update 🧭'
+        file: act3/act3
+        sections:
+          - title: Notification
+            file: act3/part3/part3_1
+          - title: Backend
+            file: act3/part3/part3_2
+          - title: Feedback
+            file: act3/part3/part3_3
+
+  - file: bibliography
