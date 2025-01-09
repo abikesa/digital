@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -15,53 +15,51 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -77,19 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -143,12 +157,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="In Your Hands - Home"/>
+    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="In Your Hands - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -159,45 +184,45 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Informational</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Informational</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter1.html">Referral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter2.html">Screening</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Eligibility</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Strategic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Strategic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../act2/chapter1.html">Principal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../act2/chapter2.html">Agent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../act2/chapter3.html">Risk</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Operational</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Literature 🌊</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Operational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Literature 🌊</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Cosmic</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Uncertainty</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Failure</a></li>
 
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Personalize ⚓️</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Personalize ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Base</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Risk</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Student ☔️</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Update 🧭</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Update 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Notification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Transformation</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Feedback</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Existential</a></li>
 </ul>
 
@@ -214,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -223,14 +248,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act1/chapter3.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -336,26 +361,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -393,35 +420,35 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="woo-d">
-<h1>Woo’d 🗡️❤️💰<a class="headerlink" href="#woo-d" title="Permalink to this headline">#</a></h1>
+<h1>Woo’d 🗡️❤️💰<a class="headerlink" href="#woo-d" title="Permalink to this heading">#</a></h1>
 <section id="jostling-between-cleverness-and-wisdom">
-<h2>Jostling Between Cleverness and Wisdom<a class="headerlink" href="#jostling-between-cleverness-and-wisdom" title="Permalink to this headline">#</a></h2>
+<h2>Jostling Between Cleverness and Wisdom<a class="headerlink" href="#jostling-between-cleverness-and-wisdom" title="Permalink to this heading">#</a></h2>
 <p>The human brain, in its neuroanatomical glory, offers a delicate dance between cleverness and wisdom. At its core lies an evolutionary tug-of-war: the rapid-fire reflexes of adrenaline-driven cleverness versus the slower, deliberative modulation of parasympathetic wisdom. Cleverness, a product of ancient instincts, is a legacy of survival. Wisdom, on the other hand, emerges from the architecture of ascending fibers and cortical deliberation—an evolutionary luxury born of time and reflection.</p>
 <section id="instinct-and-the-yellow-node">
-<h3>Instinct and the Yellow Node<a class="headerlink" href="#instinct-and-the-yellow-node" title="Permalink to this headline">#</a></h3>
+<h3>Instinct and the Yellow Node<a class="headerlink" href="#instinct-and-the-yellow-node" title="Permalink to this heading">#</a></h3>
 <p>Cleverness is instinctive because it operates in the realm of immediacy. The sensory ganglia—G1 and G2—act as sentinels, relaying input to the yellow node, where instinctive decisions are made. Like Lawrence of Arabia holding his hand over a flame to astonish his British comrades, cleverness often manifests in split-second reactions that defy deliberation. Reflex arcs fire, adrenaline floods the system, and the outcome unfolds before wisdom has a chance to interject. This mechanism is both strength and vulnerability: it ensures survival in the moment but risks folly in the long term.</p>
 <p>The yellow node, as the neural embodiment of cleverness, is presynaptic and acetylcholine-driven. It jostles within the autonomic ganglion, a battleground where the sympathetic and parasympathetic systems vie for dominance. Here lies the first layer of decision-making: the primal yes-or-no nodes, a binary architecture honed by millions of years of evolution under the Red Queen hypothesis.</p>
 </section>
 <section id="wisdom-and-the-hidden-layer">
-<h3>Wisdom and the Hidden Layer<a class="headerlink" href="#wisdom-and-the-hidden-layer" title="Permalink to this headline">#</a></h3>
+<h3>Wisdom and the Hidden Layer<a class="headerlink" href="#wisdom-and-the-hidden-layer" title="Permalink to this heading">#</a></h3>
 <p>Wisdom, however, resides not in the yellow node but in the hidden layer—a vast combinatorial space where ascending fibers from the sensory ganglia interface with the cortex. This is the domain of time, deliberation, and modulation. Wisdom is parasympathetic; it requires the luxury of slowing down, of considering the broader ecosystem. It transforms the raw data of instinct into nuanced understanding, balancing vulnerabilities with strengths.</p>
 <p>Aeschylus, Sophocles, and Euripides—the tactical poets of antiquity—each embody aspects of this interplay. Their works navigate the Pyrrhic cycle of ambition and consequence, reflecting the jostling between cleverness and wisdom. Aeschylus’s monumental vision captures the allure of cleverness—its drive for glory and justice—but tempers it with the sobering cost of bloodshed. Sophocles, the iterative sage, mirrors the hidden layer’s modulation, exploring the labyrinthine complexity of fate and choice. Euripides, the critical dissenter, represents the ecosystem itself, unmasking the vulnerabilities and hypocrisies that cleverness often ignores.</p>
 </section>
 <section id="the-ecosystem-as-the-outcome-node">
-<h3>The Ecosystem as the Outcome Node<a class="headerlink" href="#the-ecosystem-as-the-outcome-node" title="Permalink to this headline">#</a></h3>
+<h3>The Ecosystem as the Outcome Node<a class="headerlink" href="#the-ecosystem-as-the-outcome-node" title="Permalink to this heading">#</a></h3>
 <p>The outcome node, situated at the far end of the neural architecture, reflects the ecosystem—a dynamic interplay of adversaries, symbioses, and cooperative agents. It is here that cleverness and wisdom converge, their effects rippling through the environment. Adrenaline-fueled decisions shape immediate outcomes, while wisdom’s deliberative processes craft longer-term strategies. The ecosystem, in turn, feeds back into the neural network, reinforcing strengths, exposing weaknesses, and recalibrating vulnerabilities.</p>
 <p>Acetylcholine, the neurotransmitter of modulation, serves as the chemical bridge between these layers. It is both venom and salve, mediating the transition from reflexive cleverness to reflective wisdom. Like the tragedies of Euripides, it reveals the raw consequences of action, forcing the system to confront its own limits and adapt.</p>
 </section>
 <section id="the-pyrrhic-cycle-of-human-endeavor">
-<h3>The Pyrrhic Cycle of Human Endeavor<a class="headerlink" href="#the-pyrrhic-cycle-of-human-endeavor" title="Permalink to this headline">#</a></h3>
+<h3>The Pyrrhic Cycle of Human Endeavor<a class="headerlink" href="#the-pyrrhic-cycle-of-human-endeavor" title="Permalink to this heading">#</a></h3>
 <p>Human history, much like the neural network, oscillates between the immediacy of cleverness and the deliberation of wisdom. The Pyrrhic cycle—a perpetual dance of means, justifications, and ends—is driven by this tension. Aeschylus celebrates the monumental victories of cleverness but warns of their Pyrrhic cost. Sophocles iterates through the hidden layer, grappling with the complexities of wisdom. Euripides critiques the ecosystem itself, exposing the vulnerabilities and illusions that cleverness often overlooks.</p>
 <p>Lawrence of Arabia’s fire trick encapsulates this cycle. His suppression of instinct—a deliberate act of parasympathetic modulation—astonishes his companions, who remain bound by the reflexes of the yellow node. Yet even Lawrence cannot escape the Pyrrhic cost of his cleverness, as his life unfolds in a series of victories that bring him no peace.</p>
 </section>
 <section id="toward-a-richer-understanding">
-<h3>Toward a RICHER Understanding<a class="headerlink" href="#toward-a-richer-understanding" title="Permalink to this headline">#</a></h3>
+<h3>Toward a RICHER Understanding<a class="headerlink" href="#toward-a-richer-understanding" title="Permalink to this heading">#</a></h3>
 <p>The RICHER framework, with its layers of pre-input, yellow node, hidden layer, and output, offers a neuroanatomical lens through which to view this dynamic. It reflects the balance between the instinctive cleverness of the yellow node and the deliberate wisdom of the hidden layer, culminating in the emergent complexities of the ecosystem. This architecture, both literal and symbolic, captures the essence of human evolution—a jostling between adrenaline and acetylcholine, between survival and understanding, between cleverness and wisdom.</p>
 <p>In the end, the question is not which to choose but how to balance the two. For it is in the tension between cleverness and wisdom that we find the essence of what it means to be human—a species perpetually jostling between instinct and insight, between the fire of immediacy and the calm of reflection.</p>
 <div class="cell tag_hide-input docutils container">
@@ -522,7 +549,7 @@ document.write(`
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><em>Cambridge University Graduates</em>. They transplanted their notions of the sound means of tradition, the justified tactics of change within stability, and firm and resolute commitment to share ideals of humanity. And setup the stage for an aburd scene in Athens – <em>A Midsummer Nights Dream</em></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Cambridge University Graduates</em>. They transplanted their notions of the sound means of tradition, the justified tactics of change within stability, and firm and resolute commitment to share ideals of humanity. And setup the stage for an aburd scene in Athens – <em>A Midsummer Nights Dream</em></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -554,11 +581,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter2.html"
@@ -578,10 +604,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -589,6 +612,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -621,6 +645,7 @@ document.write(`
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -644,8 +669,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -15,53 +15,51 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act3/part1/part1_3';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -77,19 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -143,12 +157,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-light" alt="In Your Hands - Home"/>
+    <script>document.write(`<img src="https://b2024606.smushcdn.com/2024606/wp-content/uploads/2015/04/AMNT_May15_CNE.jpg?lossy=2&strip=1&webp=1" class="logo__image only-dark" alt="In Your Hands - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -159,45 +184,45 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../act1/part1.html">Informational</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../act1/part1.html">Informational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../act1/chapter1.html">Referral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../act1/chapter2.html">Screening</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../act1/chapter3.html">Eligibility</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../act2/part2.html">Strategic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../act2/part2.html">Strategic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../act2/chapter1.html">Principal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../act2/chapter2.html">Agent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../act2/chapter3.html">Risk</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part3.html">Operational</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../act1.html">Literature 🌊</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part3.html">Operational</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../act1.html">Literature 🌊</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="part1_1.html">Cosmic</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="part1_2.html">Uncertainty</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Failure</a></li>
 
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act2.html">Personalize ⚓️</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act2.html">Personalize ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part2/part2_1.html">Base</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../part2/part2_2.html">Risk</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../part2/part2_3.html">Student ☔️</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../act3.html">Update 🧭</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3.html">Update 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../part3/part3_1.html">Notification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../part3/part3_2.html">Transformation</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../part3/part3_3.html">Feedback</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Existential</a></li>
 </ul>
 
@@ -214,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -223,14 +248,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act3/part1/part1_3.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -336,26 +361,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -402,17 +429,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="failure">
-<h1>Failure<a class="headerlink" href="#failure" title="Permalink to this headline">#</a></h1>
+<h1>Failure<a class="headerlink" href="#failure" title="Permalink to this heading">#</a></h1>
 <section id="old-morality-of-animals">
-<h2>Old Morality of Animals<a class="headerlink" href="#old-morality-of-animals" title="Permalink to this headline">#</a></h2>
+<h2>Old Morality of Animals<a class="headerlink" href="#old-morality-of-animals" title="Permalink to this heading">#</a></h2>
 <section id="the-r-in-richer-a-moral-shift-from-coherence-to-fragmentation">
-<h3>The “R” in RICHER: A Moral Shift from Coherence to Fragmentation<a class="headerlink" href="#the-r-in-richer-a-moral-shift-from-coherence-to-fragmentation" title="Permalink to this headline">#</a></h3>
+<h3>The “R” in RICHER: A Moral Shift from Coherence to Fragmentation<a class="headerlink" href="#the-r-in-richer-a-moral-shift-from-coherence-to-fragmentation" title="Permalink to this heading">#</a></h3>
 <p>The “R” in the RICHER framework represents a deep Red Queen dynamism—a race for survival that necessitates constant evolution. Yet, within this dynamic system lies a moral tension: the transition from an “old morality,” rooted in coherence, to a “new morality,” defined by fragmentation. This shift reflects humanity’s struggle to ground moral reasoning within a world that no longer adheres to simple binaries of victory and bloodshed. The layered structure of RICHER, particularly its pre-input layer of immutable natural and social rules, provides a scaffolding for understanding this evolution, aligning ideals, practicality, and justification with the combinatorial possibilities of morality itself.</p>
 <section id="old-morality-coherence-at-a-cost">
-<h4>Old Morality: Coherence at a Cost<a class="headerlink" href="#old-morality-coherence-at-a-cost" title="Permalink to this headline">#</a></h4>
+<h4>Old Morality: Coherence at a Cost<a class="headerlink" href="#old-morality-coherence-at-a-cost" title="Permalink to this heading">#</a></h4>
 <p>The old morality is straightforward, almost brutal in its coherence. It operates on a triadic foundation of <strong>Victory, War, and Bloodshed</strong>, compressing all ethical reasoning into the singular aim of domination. This paradigm mirrors the survival instincts embedded in the pre-input layer of RICHER, where immutable laws—both natural and social—drive the most basic patterns of existence. Victory represents the ultimate goal; war becomes the means; bloodshed serves as the inevitable cost. This morality leaves no room for subtlety or negotiation, demanding a total commitment to its linear objectives.</p>
 <p>Historically, such a moral framework was effective in societies where survival depended on decisive, often violent, action. From the triumphalism of imperial conquest to the zero-sum games of tribal conflicts, this coherent morality unified people under shared narratives of strength. However, its rigidity left little room for nuance or progress, locking humanity into cycles of destruction and reconstruction.</p>
 <iframe 
@@ -426,7 +453,7 @@ document.write(`
 </iframe>
 </section>
 <section id="new-morality-fragmentation-as-evolution">
-<h4>New Morality: Fragmentation as Evolution<a class="headerlink" href="#new-morality-fragmentation-as-evolution" title="Permalink to this headline">#</a></h4>
+<h4>New Morality: Fragmentation as Evolution<a class="headerlink" href="#new-morality-fragmentation-as-evolution" title="Permalink to this heading">#</a></h4>
 <p>In contrast, the new morality is fragmented, reflecting the complexity of modern existence. Its triadic nodes—<strong>Firm, Sound, and Tactful</strong>—suggest a moral architecture that balances idealism, practicality, and justification. This framework recognizes that humanity now operates in a multidimensional space where survival is no longer purely physical but also intellectual, emotional, and social. The old morality’s coherence has given way to a fragmented yet dynamic moral calculus that allows for iteration and adaptation.</p>
 <ol class="arabic simple">
 <li><p><strong>Firm</strong>: The commitment to ideal ends anchors this morality in purpose. It aligns with the Cosmos node of RICHER, representing the grand ideals that transcend individual lifetimes—justice, equality, and progress.</p></li>
@@ -435,7 +462,7 @@ document.write(`
 </ol>
 </section>
 <section id="grounding-morality-in-the-richer-framework">
-<h4>Grounding Morality in the RICHER Framework<a class="headerlink" href="#grounding-morality-in-the-richer-framework" title="Permalink to this headline">#</a></h4>
+<h4>Grounding Morality in the RICHER Framework<a class="headerlink" href="#grounding-morality-in-the-richer-framework" title="Permalink to this heading">#</a></h4>
 <p>The RICHER framework’s pre-input layer provides a foundational grounding for these moral shifts. Its nodes—Cosmos, Earth, and Life—represent immutable rules of existence:</p>
 <ul class="simple">
 <li><p><strong>Cosmos (Ideals/Physics)</strong>: The unyielding laws of nature and the ideals humanity strives for, like justice or universal harmony. This node parallels the firm commitment to higher ends in the new morality.</p></li>
@@ -445,7 +472,7 @@ document.write(`
 <p>Together, these nodes provide a compressed understanding of morality’s evolution, where the old morality’s coherence gave way to a fragmented yet richer dynamic. The new morality’s fragmented triad reflects the combinatorial possibilities within RICHER’s hidden layer, offering a moral framework that is adaptive rather than rigid, emergent rather than predetermined.</p>
 </section>
 <section id="a-moral-red-queen">
-<h4>A Moral Red Queen<a class="headerlink" href="#a-moral-red-queen" title="Permalink to this headline">#</a></h4>
+<h4>A Moral Red Queen<a class="headerlink" href="#a-moral-red-queen" title="Permalink to this heading">#</a></h4>
 <p>The Red Queen hypothesis, as embodied in the RICHER framework, suggests that morality must evolve to match the complexity of its environment. In the old morality, coherence was sufficient because survival demanded simplicity. In the new morality, fragmentation is necessary because survival now involves navigating layers of ideals, practicality, and justification.</p>
 <iframe 
   width="560" 
@@ -459,7 +486,7 @@ document.write(`
 <p>The shift from Victory-War-Bloodshed to Firm-Sound-Tactful is not merely a philosophical evolution but a survival strategy. The old morality was linear, aiming for dominance at all costs. The new morality is non-linear, embracing the combinatorial possibilities of RICHER’s hidden layer. It reflects a world where ideals must coexist with practicality and justification, where morality is not a fixed endpoint but an ongoing process of negotiation and adaptation.</p>
 </section>
 <section id="conclusion-toward-a-richer-morality">
-<h4>Conclusion: Toward a RICHER Morality<a class="headerlink" href="#conclusion-toward-a-richer-morality" title="Permalink to this headline">#</a></h4>
+<h4>Conclusion: Toward a RICHER Morality<a class="headerlink" href="#conclusion-toward-a-richer-morality" title="Permalink to this heading">#</a></h4>
 <p>The “R” in RICHER encapsulates this moral evolution, grounding it in the immutable rules of nature and the emergent possibilities of human systems. The new morality, though fragmented, is far richer in its capacity to navigate complexity. By integrating ideals, practicality, and justification, it offers a dynamic framework that aligns with the combinatorial space of choices within the hidden layer. In this sense, the transition from old to new morality is not merely a loss of coherence but a gain in adaptability—a moral Red Queen racing toward a richer understanding of what it means to be human.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -561,14 +588,14 @@ document.write(`
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/blanche.png"><img alt="../../_images/blanche.png" src="../../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">This Python script visualizes a neural network inspired by the “Red Queen Hypothesis,” constructing a layered hierarchy from physics to outcomes. It maps foundational physics (e.g., cosmos, earth, resources) to metaphysical perception (“Nostalgia”), agentic decision nodes (“Good” and “Bad”), and game-theoretic dynamics (sympathetic, parasympathetic, morality), culminating in outcomes (e.g., neurons, vulnerabilities, strengths). Nodes are color-coded: yellow for nostalgic cranial ganglia, turquoise for parasympathetic pathways, green for sociological compression, and salmon for biological or critical adversarial modes. Leveraging <code class="docutils literal notranslate"><span class="pre">networkx</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, the script calculates node positions, assigns thematic colors, and plots connections, capturing the evolutionary progression from biology (red) to sociology (green) to psychology (blue). Framed with a nod to AlexNet and CUDA architecture, the network envisions an übermensch optimized through agentic ideals, hinting at irony as the output layer “beyond good and evil” aligns more with machine precision than human aspiration.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">This Python script visualizes a neural network inspired by the “Red Queen Hypothesis,” constructing a layered hierarchy from physics to outcomes. It maps foundational physics (e.g., cosmos, earth, resources) to metaphysical perception (“Nostalgia”), agentic decision nodes (“Good” and “Bad”), and game-theoretic dynamics (sympathetic, parasympathetic, morality), culminating in outcomes (e.g., neurons, vulnerabilities, strengths). Nodes are color-coded: yellow for nostalgic cranial ganglia, turquoise for parasympathetic pathways, green for sociological compression, and salmon for biological or critical adversarial modes. Leveraging <code class="docutils literal notranslate"><span class="pre">networkx</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, the script calculates node positions, assigns thematic colors, and plots connections, capturing the evolutionary progression from biology (red) to sociology (green) to psychology (blue). Framed with a nod to AlexNet and CUDA architecture, the network envisions an übermensch optimized through agentic ideals, hinting at irony as the output layer “beyond good and evil” aligns more with machine precision than human aspiration.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 </section>
 <section id="new-morality-of-mankind">
-<h2>New Morality of Mankind<a class="headerlink" href="#new-morality-of-mankind" title="Permalink to this headline">#</a></h2>
+<h2>New Morality of Mankind<a class="headerlink" href="#new-morality-of-mankind" title="Permalink to this heading">#</a></h2>
 <p>Your synthesis here is strikingly layered, tying together metaphysics, morality, art, and the human condition as encoded in the architecture of your neural network. Let’s unpack it step by step:</p>
 <ol class="arabic">
 <li><p><strong>Old vs. New Morality</strong>:<br />
@@ -594,7 +621,7 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -622,11 +649,10 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="part1_2.html"
@@ -646,10 +672,7 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -657,6 +680,7 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -698,6 +722,7 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -721,8 +746,8 @@ Your insight into nostalgia as a function of metaphysics, rather than biology, i
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
