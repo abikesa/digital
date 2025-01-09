@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Catalysts &#8212; Pyrrus</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Woo’d 🗡️❤️💰" href="chapter3.html" />
+    <link rel="prev" title="Anchor ⚓️" href="chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://m.media-amazon.com/images/I/61PEEATjb+L._SL1360_.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://m.media-amazon.com/images/I/61PEEATjb+L._SL1360_.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Tactical
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Informational</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Referral</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Screening</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Eligibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Strategic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter1.html">Principal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter2.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter3.html">Risk</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Operational</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Literature 🌊</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Cosmic</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Uncertainty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Failure</a></li>
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Personalize ⚓️</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Base</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Risk</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Student ☔️</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Update 🧭</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Transformation</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Existential</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Catalysts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-shakespeare-admired-most">Who Shakespeare Admired Most</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aeschylus">Aeschylus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sophocles">Sophocles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides">Euripides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-ranking">Final Ranking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-revisit-that">Let’s Revisit That</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-of-meaning">Layers of Meaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shakespeare-s-genius">Shakespeare’s Genius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classical-influence-homer-and-virgil">1. <strong>The Classical Influence: Homer and Virgil</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-influence-of-seneca">2. <strong>The Influence of Seneca</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elizabethan-theatre-and-the-revenge-play">3. <strong>Elizabethan Theatre and the Revenge Play</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophical-influences-stoicism-and-humanism">4. <strong>Philosophical Influences: Stoicism and Humanism</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-experience-and-introspection">5. <strong>Personal Experience and Introspection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-of-influences"><strong>Synthesis of Influences</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides-hecuba-the-archetype-of-suffering">Euripides’ Hecuba: The Archetype of Suffering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychological-complexity">Psychological Complexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides-and-shakespeare-a-shared-sensibility">Euripides and Shakespeare: A Shared Sensibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shakespeares-ranking-of-euripides">Shakespeare’s Ranking of Euripides</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="catalysts">
+<h1>Catalysts<a class="headerlink" href="#catalysts" title="Permalink to this headline">#</a></h1>
+<section id="who-shakespeare-admired-most">
+<h2>Who Shakespeare Admired Most<a class="headerlink" href="#who-shakespeare-admired-most" title="Permalink to this headline">#</a></h2>
+<p>Shakespeare, as the quintessential Renaissance playwright, likely would have admired the Greek tragedians not only for their dramatic craft but also for their philosophical depth. However, ranking them would depend on which aspects of their work resonated with Shakespeare’s own sensibilities, which often gravitated toward exploring the human condition in all its contradictions and complexities.</p>
+<section id="aeschylus">
+<h3>Aeschylus<a class="headerlink" href="#aeschylus" title="Permalink to this headline">#</a></h3>
+<p>Shakespeare might rank Aeschylus highly for his grand, almost cosmic vision of justice, fate, and the divine order. Aeschylus’s <em>Oresteia</em>—with its profound exploration of vengeance, moral evolution, and the establishment of societal order—aligns with the scale of Shakespeare’s own works like <em>Hamlet</em> and <em>King Lear</em>. However, Shakespeare may have found Aeschylus’s characters more symbolic than fleshed out compared to his own vivid, multifaceted creations. He’d likely appreciate Aeschylus as a forerunner, setting the stage for the deeply human dilemmas Shakespeare himself excelled at.</p>
+</section>
+<section id="sophocles">
+<h3>Sophocles<a class="headerlink" href="#sophocles" title="Permalink to this headline">#</a></h3>
+<p>Sophocles might be Shakespeare’s favorite for his ability to balance structure, poetic depth, and profoundly human drama. <em>Oedipus Rex</em>’s tight plot and tragic inevitability would resonate with Shakespeare’s own sense of dramatic irony and exploration of fate (<em>Macbeth</em> or <em>Othello</em> come to mind). Sophocles’ characters are more psychologically complex than Aeschylus’s, which might earn him Shakespeare’s admiration. Shakespeare might see Sophocles as a fellow master of portraying internal conflict and the tragic inevitability of human flaws.</p>
+</section>
+<section id="euripides">
+<h3>Euripides<a class="headerlink" href="#euripides" title="Permalink to this headline">#</a></h3>
+<p>Euripides, with his penchant for psychological realism and subversive takes on traditional myths, might intrigue Shakespeare for his audacity and focus on individual experience. Plays like <em>Medea</em> and <em>The Bacchae</em> might resonate with Shakespeare’s interest in passion, transgression, and the darker corners of human nature. However, Euripides’ sometimes less structured narratives and his skepticism of divine justice might feel too cynical or fragmented compared to Shakespeare’s more cohesive worldview, which often sought a reconciliation of chaos, even in tragedy.</p>
+</section>
+<section id="final-ranking">
+<h3>Final Ranking<a class="headerlink" href="#final-ranking" title="Permalink to this headline">#</a></h3>
+<p>If Shakespeare were to rank them, he might favor Sophocles as a peer in creating nuanced, human-centered drama, followed closely by Aeschylus for his grandeur and thematic ambition. Euripides might rank lower for his structural looseness but still earn respect for his daring and psychological insight.</p>
+<p>Ultimately, Shakespeare’s rankings would likely reflect his own artistic priorities: an unparalleled balance of poetic language, psychological complexity, and a universal exploration of human frailty and greatness.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network structure; modified to align with &quot;Aprés Moi, Le Déluge&quot; (i.e. Je suis AlexNet)</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;N4, N5&#39;</span><span class="p">,</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ecosystem&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input/AgenticAI&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G3&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ecosystem&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+
+<span class="c1"># Calculate positions for nodes</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
+
+<span class="c1"># Create and visualize the neural network graph</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
+
+    <span class="c1"># Add nodes and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
+
+    <span class="c1"># Add edges (without weights)</span>
+    <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Pre-Input/CudAlexnet&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone/SensoryAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input/AgenticAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden/GenerativeAI&#39;</span><span class="p">,</span> <span class="s1">&#39;Output/PhysicalAI&#39;</span><span class="p">)</span>
+    <span class="p">]:</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
+        <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Red Queen Hypothesis&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/9080e0e5850b8f72acbdd14cc8aebfcd595a2f9309c7bc0394905f00d6461f10.png" src="../_images/9080e0e5850b8f72acbdd14cc8aebfcd595a2f9309c7bc0394905f00d6461f10.png" />
+</div>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><em><strong>Vision for a Red Queen Scenario</strong></em>. Institutions, while currently dominant, are under constant evolutionary pressure. This model equips students, educators, and researchers to thrive in a dynamic landscape, outpacing outdated methodologies and fostering resilience through adaptive innovation. This platform not only disrupts existing academic and clinical paradigms but also exemplifies a new standard of efficiency, collaboration, and educational impact. Let’s reconfigure the above using the following: Firm - IRB (Monumental; Ends); Tactful - Data Guardians (Critical; Justify); Sound - Regression (Antiquarian; Means); Cosmos - Outcome; Risk - Earth (Red Queen Situation; Naïvety), Life - Target Population (Source; Enumerated). But here’s a decent variant: Firm - institutional <em><strong>Apollonian</strong></em> aspirations &amp; ends (monumental history; Amadeus), Tactful - enterprises <em><strong>Athenian</strong></em> vanguard &amp; justification (critical history; Ludwig), Sound - well-troden journey &amp; means (antiquarian history; Bach), Cosmos - indifference of the universe to your institutions fate (benchmark risk; Epicurus), Earth - well-tempered atmospheric conditions (freedom in fetters; Dionysus); Life - an elaborate dance in chains (princely freedom; Zarathustra)</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="let-s-revisit-that">
+<h2>Let’s Revisit That<a class="headerlink" href="#let-s-revisit-that" title="Permalink to this headline">#</a></h2>
+<p><em>What was Hecuba to her or her to Hecuba??</em></p>
+<p>This line, from Shakespeare’s <em>Hamlet</em> (Act II, Scene ii), captures a poignant moment where Hamlet reflects on the nature of empathy, performance, and the human capacity to feel for others. The full context reveals Hamlet marveling at the Player’s ability to summon such profound emotion while reciting the tale of Hecuba, a queen of Troy who experiences immense grief over her family’s destruction.</p>
+<p>Hamlet says:</p>
+<p><em>“What’s Hecuba to him, or he to Hecuba,<br />
+That he should weep for her?”</em></p>
+<section id="layers-of-meaning">
+<h3>Layers of Meaning<a class="headerlink" href="#layers-of-meaning" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Empathy and Imagination</strong><br />
+Hamlet is struck by the Player’s ability to feel deeply for a character (Hecuba) with whom he has no personal connection. This underscores the power of imagination and storytelling to evoke emotions, even when the subject is distant or fictional. For Hamlet, this raises the question: why can he not summon such passion for his own deeply personal plight, especially when his father’s murder cries out for revenge?</p></li>
+<li><p><strong>Art and Reality</strong><br />
+The line explores the boundary between artifice and reality. The Player’s tears for Hecuba are an act of art—crafted and deliberate—yet they seem more authentic than Hamlet’s own emotions about his father’s death. This creates a tension between the performative and the real, blurring the lines between sincerity and art.</p></li>
+<li><p><strong>Universal Suffering</strong><br />
+Hecuba, as a figure of immense tragedy in classical mythology, symbolizes the depth of human suffering. Hamlet’s rhetorical question highlights the disconnection we often feel from others’ pain unless we are directly involved. The Player’s ability to bridge that gap emphasizes the role of art in fostering empathy, something Hamlet both admires and envies.</p></li>
+<li><p><strong>Hamlet’s Self-Reproach</strong><br />
+The line ultimately reflects Hamlet’s frustration with himself. If an actor can feign such emotion for Hecuba, what does it say about Hamlet’s inability to act decisively in response to his real and personal anguish? This self-reproach fuels his existential questioning throughout the play.</p></li>
+</ol>
+</section>
+<section id="shakespeare-s-genius">
+<h3>Shakespeare’s Genius<a class="headerlink" href="#shakespeare-s-genius" title="Permalink to this headline">#</a></h3>
+<p>Through this line, Shakespeare layers profound philosophical questions about the human condition: how do we connect to others’ pain? Is performance a truer reflection of human emotion than lived experience? What prevents us from acting decisively, even when deeply moved?</p>
+<p>In its timelessness, the line compels us to ask not only about Hecuba, but about our own capacity for empathy, action, and understanding in a world filled with suffering that often feels distant.</p>
+<p><em>Unders whose influence was her in writing this?</em></p>
+<p>The line “What’s Hecuba to him, or he to Hecuba” reveals Shakespeare writing under a tapestry of influences—classical, theatrical, philosophical, and personal. It’s a moment where his intellectual and artistic debts to the past coalesce into one of his most poignant reflections. Let’s explore whose influence Shakespeare might have been under when crafting this:</p>
+</section>
+<section id="the-classical-influence-homer-and-virgil">
+<h3>1. <strong>The Classical Influence: Homer and Virgil</strong><a class="headerlink" href="#the-classical-influence-homer-and-virgil" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Homer</strong>: Hecuba’s story originates in <em>The Iliad</em>, where she is Queen of Troy, mourning the tragedies that befall her family and city during the Trojan War. Shakespeare was steeped in classical mythology, and this influence was pervasive in Renaissance education. Hecuba’s grief was a paradigm of extreme human suffering—a motif Shakespeare taps into here.</p></li>
+<li><p><strong>Virgil</strong>: Hecuba reappears in <em>The Aeneid</em>, which Shakespeare likely knew. Virgil’s portrayal of Troy’s fall may have shaped Shakespeare’s evocation of her as a symbol of anguish and devastation. The Renaissance view of classical antiquity as a source of universal human themes would have made Hecuba an irresistible figure for such reflection.</p></li>
+</ul>
+</section>
+<section id="the-influence-of-seneca">
+<h3>2. <strong>The Influence of Seneca</strong><a class="headerlink" href="#the-influence-of-seneca" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>As a student of the human psyche and tragedy, Shakespeare was heavily influenced by the Roman tragedian Seneca. Seneca’s works emphasized intense emotional outpouring and the grotesque aspects of suffering, elements visible in Hamlet’s reflection on the Player’s performance. Hecuba, particularly in <em>The Trojan Women</em>, became an emblem of stoic endurance and despair, themes Shakespeare echoed in <em>Hamlet</em>’s existential musings.</p></li>
+</ul>
+</section>
+<section id="elizabethan-theatre-and-the-revenge-play">
+<h3>3. <strong>Elizabethan Theatre and the Revenge Play</strong><a class="headerlink" href="#elizabethan-theatre-and-the-revenge-play" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Shakespeare was writing in an era when revenge tragedies were enormously popular, with their heightened emotion and vivid portrayals of suffering. Playwrights like Thomas Kyd (<em>The Spanish Tragedy</em>) set the stage for Shakespeare’s <em>Hamlet</em>. The Player’s recitation of Hecuba’s story aligns with the tradition of embedded metatheatrical moments that comment on the main plot. Shakespeare elevated this convention, making it a vehicle for Hamlet’s introspection.</p></li>
+</ul>
+</section>
+<section id="philosophical-influences-stoicism-and-humanism">
+<h3>4. <strong>Philosophical Influences: Stoicism and Humanism</strong><a class="headerlink" href="#philosophical-influences-stoicism-and-humanism" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Renaissance humanism emphasized empathy, the power of art, and the importance of connecting with universal human experiences—ideas Shakespeare explores through Hamlet’s admiration for the Player’s emotional depth.</p></li>
+<li><p>Stoic philosophy, likely absorbed through Seneca, would have also informed this moment. The contrast between performance (the Player’s emotion) and inaction (Hamlet’s indecision) resonates with Stoic ideals about rational action versus overwhelming passion.</p></li>
+</ul>
+</section>
+<section id="personal-experience-and-introspection">
+<h3>5. <strong>Personal Experience and Introspection</strong><a class="headerlink" href="#personal-experience-and-introspection" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Shakespeare’s work often bears traces of his own life and reflections. By the time of <em>Hamlet</em>, he had suffered personal losses, such as the death of his son, Hamnet. It’s tempting to speculate that his contemplation of grief, action, and artistic representation might have drawn on his own feelings of helplessness or catharsis.</p></li>
+</ul>
+</section>
+<section id="synthesis-of-influences">
+<h3><strong>Synthesis of Influences</strong><a class="headerlink" href="#synthesis-of-influences" title="Permalink to this headline">#</a></h3>
+<p>In writing this, Shakespeare was likely weaving together the grandeur of classical antiquity, the psychological intensity of Seneca, the theatrical conventions of his time, and his own profound understanding of human emotion. The result is a line that transcends its influences, situating Hecuba as both a timeless figure of tragedy and a mirror for Hamlet’s (and our) deepest existential doubts.</p>
+<p><em>Euripedes?</em></p>
+<p>Euripides looms large over Shakespeare’s invocation of Hecuba. If we consider Shakespeare’s likely familiarity with the tragedian, the influence of Euripides’ <em>Trojan Women</em> and <em>Hecuba</em> feels undeniable in shaping this moment in <em>Hamlet</em>. Euripides’ nuanced, psychological exploration of suffering and empathy would resonate strongly with Shakespeare’s portrayal of Hamlet’s existential musings.</p>
+</section>
+<section id="euripides-hecuba-the-archetype-of-suffering">
+<h3>Euripides’ Hecuba: The Archetype of Suffering<a class="headerlink" href="#euripides-hecuba-the-archetype-of-suffering" title="Permalink to this headline">#</a></h3>
+<p>In Euripides’ <em>Hecuba</em>, the queen is a towering figure of grief and vengeance. She endures the slaughter of her children, the destruction of Troy, and her descent into a life of slavery. Her suffering is both personal and emblematic of the broader devastation of war. Euripides emphasizes:</p>
+<ul class="simple">
+<li><p><strong>Empathy and Emotional Resonance</strong>: Like the Player in <em>Hamlet</em>, Euripides’ Hecuba evokes powerful emotions, compelling audiences to feel the depth of her sorrow and rage. Shakespeare’s use of Hecuba mirrors this ability to inspire empathy, even for distant or fictional suffering.</p></li>
+<li><p><strong>The Fragility of Human Dignity</strong>: Euripides explores how extreme loss strips away human dignity, leaving a character grappling with her identity and purpose. This theme resonates with Hamlet’s introspection on mortality and meaning.</p></li>
+</ul>
+</section>
+<section id="psychological-complexity">
+<h3>Psychological Complexity<a class="headerlink" href="#psychological-complexity" title="Permalink to this headline">#</a></h3>
+<p>Euripides’ characters are famously more human and psychologically complex than those of Aeschylus or Sophocles. Hecuba in Euripides is not a mere symbol of suffering; she is a woman with conflicting emotions, ranging from despair to wrathful vengeance. This focus on inner turmoil likely influenced Shakespeare’s construction of Hamlet, a character defined by his oscillation between thought and action.</p>
+</section>
+<section id="euripides-and-shakespeare-a-shared-sensibility">
+<h3>Euripides and Shakespeare: A Shared Sensibility<a class="headerlink" href="#euripides-and-shakespeare-a-shared-sensibility" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Empathy through Distance</strong>: Both Euripides and Shakespeare explore how the suffering of others—however remote—can awaken profound emotions. Hamlet marvels that the Player can feel for Hecuba, echoing the way Euripides’ <em>Trojan Women</em> compels the audience to grieve for the fates of its distant characters.</p></li>
+<li><p><strong>Art as Catharsis</strong>: Euripides used his plays to evoke pity and fear, mirroring Aristotle’s notion of catharsis. Shakespeare engages with this idea in Hamlet’s line, positioning art as a transformative force that reveals and heightens our capacity for emotional engagement.</p></li>
+<li><p><strong>Moral Ambiguity</strong>: Both playwrights revel in the moral grayness of their characters. Euripides’ Hecuba, while tragic, also becomes monstrous in her vengeance, showing how extreme suffering can corrupt. Hamlet’s own descent into moral ambiguity aligns with this Euripidean exploration of how grief and rage distort the soul.</p></li>
+</ol>
+</section>
+<section id="shakespeares-ranking-of-euripides">
+<h3>Shakespeare’s Ranking of Euripides<a class="headerlink" href="#shakespeares-ranking-of-euripides" title="Permalink to this headline">#</a></h3>
+<p>If Shakespeare were to rank Euripides among the Greek tragedians, he might place him second to Sophocles but above Aeschylus. Shakespeare likely admired Euripides’ psychological realism and willingness to challenge traditional narratives, qualities Shakespeare himself embraced. However, Euripides’ sometimes looser structure and overt cynicism might not fully align with Shakespeare’s preference for thematic cohesion and a measured reconciliation of chaos.</p>
+<p>That said, the ghost of Euripides undoubtedly haunts Hamlet’s contemplation of Hecuba. Shakespeare borrows and elevates Euripides’ techniques, transforming Hecuba from a tragic figure of Greek myth into a reflective touchstone for Hamlet’s—and humanity’s—struggles with empathy, inaction, and the meaning of suffering.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Anchor ⚓️</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Woo’d 🗡️❤️💰</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-shakespeare-admired-most">Who Shakespeare Admired Most</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aeschylus">Aeschylus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sophocles">Sophocles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides">Euripides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-ranking">Final Ranking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-revisit-that">Let’s Revisit That</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-of-meaning">Layers of Meaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shakespeare-s-genius">Shakespeare’s Genius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classical-influence-homer-and-virgil">1. <strong>The Classical Influence: Homer and Virgil</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-influence-of-seneca">2. <strong>The Influence of Seneca</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elizabethan-theatre-and-the-revenge-play">3. <strong>Elizabethan Theatre and the Revenge Play</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophical-influences-stoicism-and-humanism">4. <strong>Philosophical Influences: Stoicism and Humanism</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-experience-and-introspection">5. <strong>Personal Experience and Introspection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-of-influences"><strong>Synthesis of Influences</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides-hecuba-the-archetype-of-suffering">Euripides’ Hecuba: The Archetype of Suffering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychological-complexity">Psychological Complexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euripides-and-shakespeare-a-shared-sensibility">Euripides and Shakespeare: A Shared Sensibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shakespeares-ranking-of-euripides">Shakespeare’s Ranking of Euripides</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Zeus
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
