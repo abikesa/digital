@@ -432,57 +432,42 @@ document.write(`
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
-<span class="c1"># Define the neural network structure; modified to align with &quot;Aprés Moi, Le Déluge&quot; (i.e. Je suis AlexNet)</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;Physics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Sacrifice&#39;</span><span class="p">,</span> <span class="s1">&#39;Means&#39;</span><span class="p">,</span> <span class="s1">&#39;Ends&#39;</span><span class="p">],</span> <span class="c1"># CUDA &amp; AlexNet</span>
-        <span class="s1">&#39;Metaphysics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Instinct&#39;</span><span class="p">],</span> <span class="c1"># Perception AI</span>
-        <span class="s1">&#39;Decisions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">],</span> <span class="c1"># Agentic AI &quot;Test-Time Scaling&quot; (as opposed to Pre-Trained -Data Scaling &amp; Post-Trained -RLHF)</span>
-        <span class="s1">&#39;Games&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Old &amp; New Morality&#39;</span><span class="p">,</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">],</span> <span class="c1"># Generative AI (Plan/Cooperative/Monumental, Tool Use/Iterative/Antiquarian, Critique/Adversarial/Critical)</span>
-        <span class="s1">&#39;Outcomes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Levant&#39;</span><span class="p">,</span> <span class="s1">&#39;Imposthume&#39;</span><span class="p">,</span> <span class="s1">&#39;Priestly&#39;</span><span class="p">,</span> <span class="s1">&#39;Wisdom&#39;</span><span class="p">,</span> <span class="s1">&#39;Temple&#39;</span><span class="p">]</span> <span class="c1"># Physical AI (Calculator, Web Search, SQL Search, Generate Podcast)</span>
+        <span class="s1">&#39;Physics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Sacrifice&#39;</span><span class="p">,</span> <span class="s1">&#39;Means&#39;</span><span class="p">,</span> <span class="s1">&#39;Ends&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Metaphysics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Instinct&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Decisions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Games&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Old &amp; New Morality&#39;</span><span class="p">,</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Outcomes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Levant&#39;</span><span class="p">,</span> <span class="s1">&#39;Imposthume&#39;</span><span class="p">,</span> <span class="s1">&#39;Priestly&#39;</span><span class="p">,</span> <span class="s1">&#39;Wisdom&#39;</span><span class="p">,</span> <span class="s1">&#39;Temple&#39;</span><span class="p">]</span>
     <span class="p">}</span>
 
-<span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Instinct&#39;</span><span class="p">:</span> <span class="c1">## Cranial Nerve Ganglia &amp; Dorsal Root Ganglia</span>
-        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physics&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Ends&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physics&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Means&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Decisions&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Good&#39;</span><span class="p">:</span> <span class="c1"># Basal Ganglia, Thalamus, Hypothalamus; N4, N5: Brainstem, Cerebellum</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Games&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Old &amp; New Morality&#39;</span><span class="p">:</span> <span class="c1"># Autonomic Ganglia (ACh)</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;David&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Outcomes&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Temple&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Wisdom&#39;</span><span class="p">,</span> <span class="s1">&#39;Priestly&#39;</span><span class="p">,</span> <span class="s1">&#39;Imposthume&#39;</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Levant&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
-    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Instinct&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physics&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Ends&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physics&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Means&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Decisions&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Good&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Games&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Old &amp; New Morality&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;David&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Outcomes&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Temple&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Wisdom&#39;</span><span class="p">,</span> <span class="s1">&#39;Priestly&#39;</span><span class="p">,</span> <span class="s1">&#39;Imposthume&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Levant&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
 
-<span class="c1"># Calculate positions for nodes</span>
 <span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
     <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
-    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
 
-<span class="c1"># Create and visualize the neural network graph</span>
 <span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
+    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="c1"># Add nodes and assign positions</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
         <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
@@ -490,32 +475,52 @@ document.write(`
             <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
             <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
 
-    <span class="c1"># Add edges (without weights)</span>
     <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span> <span class="s1">&#39;Metaphysics&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Metaphysics&#39;</span><span class="p">,</span> <span class="s1">&#39;Decisions&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Decisions&#39;</span><span class="p">,</span> <span class="s1">&#39;Games&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Games&#39;</span><span class="p">,</span> <span class="s1">&#39;Outcomes&#39;</span><span class="p">)</span>
     <span class="p">]:</span>
         <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
         <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
             <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
-                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">source</span> <span class="o">==</span> <span class="s2">&quot;Means&quot;</span> <span class="ow">and</span> <span class="n">target</span> <span class="o">==</span> <span class="s2">&quot;Instinct&quot;</span><span class="p">:</span>
+                    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 
-    <span class="c1"># Draw the graph</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
-        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
-        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
-    <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Human Sacrifice&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Ends&#39;</span><span class="p">,</span> <span class="s1">&#39;Instinct&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">:</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;arc3,rad=0.1&quot;</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;Instinct&#39;</span><span class="p">,</span> <span class="s1">&#39;Means&#39;</span><span class="p">):</span>
+            <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;arc3,rad=-0.1&quot;</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;lightgreen&#39;</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;Ends&#39;</span><span class="p">,</span> <span class="s1">&#39;Instinct&#39;</span><span class="p">):</span>
+            <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;arc3,rad=0.2&quot;</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;paleturquoise&#39;</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="mi">2</span>
+
+        <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span>
+            <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edgelist</span><span class="o">=</span><span class="p">[(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)],</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
+            <span class="n">edge_color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mi">25</span>
+        <span class="p">)</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Run the visualization</span>
 <span class="n">visualize_nn</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/cf412e9dca525b5300a6fafba887339daba98de6cb36cae015df7a20385d2370.png" src="_images/cf412e9dca525b5300a6fafba887339daba98de6cb36cae015df7a20385d2370.png" />
+<img alt="_images/31903cf80888e9ebb721d13f66c656b0fa45f62b7be15a61273bd2e58ca017da.png" src="_images/31903cf80888e9ebb721d13f66c656b0fa45f62b7be15a61273bd2e58ca017da.png" />
 </div>
 </div>
 <figure class="align-default" id="id3">
